@@ -1,2 +1,1646 @@
 [
-]
+    {
+      "cdsName": "I_BANK_2",
+      "tableName": "BNKA",
+      "mapping": [
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "BankCountry",
+          "table": "BNKA",
+          "tableField": "BANKS"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "BankInternalID",
+          "table": "BNKA",
+          "tableField": "BANKL"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "CreationDate",
+          "table": "BNKA",
+          "tableField": "ERDAT"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "CreatedByUser",
+          "table": "BNKA",
+          "tableField": "ERNAM"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "BankName",
+          "table": "BNKA",
+          "tableField": "BANKA"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "Region",
+          "table": "BNKA",
+          "tableField": "PROVZ"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "StreetName",
+          "table": "BNKA",
+          "tableField": "STRAS"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "ShortStreetName",
+          "table": "BNKA",
+          "tableField": "STRAS"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "CityName",
+          "table": "BNKA",
+          "tableField": "ORT01"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "ShortCityName",
+          "table": "BNKA",
+          "tableField": "ORT01"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "SWIFTCode",
+          "table": "BNKA",
+          "tableField": "SWIFT"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "BankNetworkGrouping",
+          "table": "BNKA",
+          "tableField": "BGRUP"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "IsPostBankAccount",
+          "table": "BNKA",
+          "tableField": "XPGRO"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "IsMarkedForDeletion",
+          "table": "BNKA",
+          "tableField": "LOEVM"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "Bank",
+          "table": "BNKA",
+          "tableField": "BNKLZ"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "PostOfficeBankAccount",
+          "table": "BNKA",
+          "tableField": "PSKTO"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "Branch",
+          "table": "BNKA",
+          "tableField": "BRNCH"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "BankBranch",
+          "table": "BNKA",
+          "tableField": "BRNCH"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "CheckDigitCalculationMethod",
+          "table": "BNKA",
+          "tableField": "CHKME"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "BankDataFileFormat",
+          "table": "BNKA",
+          "tableField": "VERS"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "AddressID",
+          "table": "BNKA",
+          "tableField": "ADRNR"
+        },
+        {
+          "cds": "I_BANK_2",
+          "cdsField": "BankCategory",
+          "table": "",
+          "tableField": ""
+        }
+      ]
+    },
+    {
+      "cdsName": "I_BUSINESSPARTNER",
+      "tableName": "BUT000",
+      "mapping": [
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartner",
+          "table": "BUT000",
+          "tableField": "PARTNER"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerCategory",
+          "table": "BUT000",
+          "tableField": "TYPE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "AuthorizationGroup",
+          "table": "BUT000",
+          "tableField": "AUGRP"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerUUID",
+          "table": "BUT000",
+          "tableField": "PARTNER_GUID"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "PersonNumber",
+          "table": "BUT000",
+          "tableField": "PERSNUMBER"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "ETag",
+          "table": "BUT000",
+          "tableField": "CASE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerName",
+          "table": "BUT000",
+          "tableField": "CASE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerFullName",
+          "table": "BUT000",
+          "tableField": "CASE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "CreatedByUser",
+          "table": "BUT000",
+          "tableField": "CRUSR"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "CreationDate",
+          "table": "BUT000",
+          "tableField": "CRDAT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "CreationTime",
+          "table": "BUT000",
+          "tableField": "CRTIM"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "LastChangedByUser",
+          "table": "BUT000",
+          "tableField": "CHUSR"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "LastChangeDate",
+          "table": "BUT000",
+          "tableField": "CHDAT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "LastChangeTime",
+          "table": "BUT000",
+          "tableField": "CHTIM"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerIsBlocked",
+          "table": "BUT000",
+          "tableField": "XBLCK"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IsBusinessPurposeCompleted",
+          "table": "BUT000",
+          "tableField": "XPCPT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "FirstName",
+          "table": "BUT000",
+          "tableField": "NAME_FIRST"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "LastName",
+          "table": "BUT000",
+          "tableField": "NAME_LAST"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "PersonFullName",
+          "table": "BUT000",
+          "tableField": "NAME1_TEXT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "OrganizationBPName1",
+          "table": "BUT000",
+          "tableField": "NAME_ORG1"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "OrganizationBPName2",
+          "table": "BUT000",
+          "tableField": "NAME_ORG2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "OrganizationBPName3",
+          "table": "BUT000",
+          "tableField": "NAME_ORG3"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "OrganizationBPName4",
+          "table": "BUT000",
+          "tableField": "NAME_ORG4"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "InternationalLocationNumber1",
+          "table": "BUT000",
+          "tableField": "LOCATION_1"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "InternationalLocationNumber2",
+          "table": "BUT000",
+          "tableField": "LOCATION_2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "InternationalLocationNumber3",
+          "table": "BUT000",
+          "tableField": "LOCATION_3"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "LegalForm",
+          "table": "BUT000",
+          "tableField": "LEGAL_ENTY"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "OrganizationFoundationDate",
+          "table": "BUT000",
+          "tableField": "FOUND_DAT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "OrganizationLiquidationDate",
+          "table": "BUT000",
+          "tableField": "LIQUID_DAT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "Industry",
+          "table": "BUT000",
+          "tableField": "IND_SECTOR"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IsNaturalPerson",
+          "table": "BUT000",
+          "tableField": "NATPERS"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IsFemale",
+          "table": "BUT000",
+          "tableField": "XSEXF"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IsMale",
+          "table": "BUT000",
+          "tableField": "XSEXM"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IsSexUnknown",
+          "table": "BUT000",
+          "tableField": "XSEXU"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "FormOfAddress",
+          "table": "BUT000",
+          "tableField": "TITLE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "AcademicTitle",
+          "table": "BUT000",
+          "tableField": "TITLE_ACA1"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "AcademicTitle2",
+          "table": "BUT000",
+          "tableField": "TITLE_ACA2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "NameFormat",
+          "table": "BUT000",
+          "tableField": "NAMEFORMAT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "NameCountry",
+          "table": "BUT000",
+          "tableField": "NAMCOUNTRY"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerGrouping",
+          "table": "BUT000",
+          "tableField": "BU_GROUP"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerType",
+          "table": "BUT000",
+          "tableField": "BPKIND"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "MiddleName",
+          "table": "BUT000",
+          "tableField": "NAMEMIDDLE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "AdditionalLastName",
+          "table": "BUT000",
+          "tableField": "NAME_LST2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "GroupBusinessPartnerName1",
+          "table": "BUT000",
+          "tableField": "NAME_GRP1"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "GroupBusinessPartnerName2",
+          "table": "BUT000",
+          "tableField": "NAME_GRP2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "CorrespondenceLanguage",
+          "table": "BUT000",
+          "tableField": "LANGU_CORR"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "Language",
+          "table": "BUT000",
+          "tableField": "BU_LANGU"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "SearchTerm1",
+          "table": "BUT000",
+          "tableField": "BU_SORT1"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "SearchTerm2",
+          "table": "BUT000",
+          "tableField": "BU_SORT2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BPLastNameSearchHelp",
+          "table": "BUT000",
+          "tableField": "MC_NAME1"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BPFirstNameSearchHelp",
+          "table": "BUT000",
+          "tableField": "MC_NAME2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerNicknameLabel",
+          "table": "BUT000",
+          "tableField": "NICKNAME"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IndependentAddressID",
+          "table": "BUT000",
+          "tableField": "ADDRCOMM"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IsActiveEntity",
+          "table": "",
+          "tableField": ""
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BirthDate",
+          "table": "BUT000",
+          "tableField": "BIRTHDT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IsMarkedForArchiving",
+          "table": "BUT000",
+          "tableField": "XDELE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "ContactPermission",
+          "table": "BUT000",
+          "tableField": "CONTACT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerIDByExtSystem",
+          "table": "BUT000",
+          "tableField": "BPEXT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "LegalEntityOfOrganization",
+          "table": "BUT000",
+          "tableField": "LEGAL_ORG"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerPrintFormat",
+          "table": "BUT000",
+          "tableField": "PRINT_MODE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerDataOriginType",
+          "table": "BUT000",
+          "tableField": "SOURCE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerIsNotReleased",
+          "table": "BUT000",
+          "tableField": "NOT_RELEASED"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "IsNotContractuallyCapable",
+          "table": "BUT000",
+          "tableField": "NOT_LG_COMPETENT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerOccupation",
+          "table": "BUT000",
+          "tableField": "JOBGR"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusPartMaritalStatus",
+          "table": "BUT000",
+          "tableField": "MARST"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusPartNationality",
+          "table": "BUT000",
+          "tableField": "NATIO"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "NonResidentCompanyOriginCntry",
+          "table": "BUT000",
+          "tableField": "CNDSC"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerSalutation",
+          "table": "BUT000",
+          "tableField": "TITLE_LET"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerBirthName",
+          "table": "BUT000",
+          "tableField": "NAME_LAST2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerSupplementName",
+          "table": "BUT000",
+          "tableField": "TITLE_ROYL"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerBirthplaceName",
+          "table": "BUT000",
+          "tableField": "BIRTHPL"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "NaturalPersonEmployerName",
+          "table": "BUT000",
+          "tableField": "EMPLO"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerDeathDate",
+          "table": "BUT000",
+          "tableField": "DEATHDT"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerBirthDateStatus",
+          "table": "BUT000",
+          "tableField": "BIRTHDT_STATUS"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BusinessPartnerGroupType",
+          "table": "BUT000",
+          "tableField": "PARTGRPTYP"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "LastNamePrefix",
+          "table": "BUT000",
+          "tableField": "PREFIX1"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "LastNameSecondPrefix",
+          "table": "BUT000",
+          "tableField": "PREFIX2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "Initials",
+          "table": "BUT000",
+          "tableField": "INITIALS"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "GenderCodeName",
+          "table": "BUT000",
+          "tableField": "GENDER"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataControllerSet",
+          "table": "BUT000",
+          "tableField": "XDCSET"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController1",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR1"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController2",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR2"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController3",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR3"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController4",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR4"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController5",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR5"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController6",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR6"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController7",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR7"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController8",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR8"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController9",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR9"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "DataController10",
+          "table": "BUT000",
+          "tableField": "DATA_CTRLR10"
+        },
+        {
+          "cds": "I_BUSINESSPARTNER",
+          "cdsField": "BPDataControllerIsNotRequired",
+          "table": "BUT000",
+          "tableField": "DC_NOT_REQ"
+        }
+      ]
+    },
+    {
+      "cdsName": "DDCDS_CUSTOMER_DOMAIN_VALUE",
+      "tableName": "DD07L",
+      "mapping": [
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE",
+          "cdsField": "domain_name",
+          "table": "DD07L",
+          "tableField": "DOMNAME"
+        },
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE",
+          "cdsField": "value_position",
+          "table": "DD07L",
+          "tableField": "VALPOS"
+        },
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE",
+          "cdsField": "value_low",
+          "table": "DD07L",
+          "tableField": "DOMVALUE_L"
+        },
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE",
+          "cdsField": "value_high",
+          "table": "DD07L",
+          "tableField": "DOMVALUE_H"
+        }
+      ]
+    },
+    {
+      "cdsName": "DDCDS_CUSTOMER_DOMAIN_VALUE_T",
+      "tableName": "DD07T",
+      "mapping": [
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE_T",
+          "cdsField": "domain_name",
+          "table": "DD07T",
+          "tableField": "DOMNAME"
+        },
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE_T",
+          "cdsField": "value_position",
+          "table": "DD07T",
+          "tableField": "VALPOS"
+        },
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE_T",
+          "cdsField": "language",
+          "table": "DD07T",
+          "tableField": "DDLANGUAGE"
+        },
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE_T",
+          "cdsField": "value_low",
+          "table": "DD07T",
+          "tableField": "DOMVALUE_L"
+        },
+        {
+          "cds": "DDCDS_CUSTOMER_DOMAIN_VALUE_T",
+          "cdsField": "text",
+          "table": "DD07T",
+          "tableField": "DDTEXT"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_BUSINESSPARTNERTAXNUMBER",
+      "tableName": "LFAS",
+      "mapping": [
+        {
+          "cds": "I_BUSINESSPARTNERTAXNUMBER",
+          "cdsField": "BusinessPartner",
+          "table": "LFAS",
+          "tableField": "PARTNER"
+        },
+        {
+          "cds": "I_BUSINESSPARTNERTAXNUMBER",
+          "cdsField": "BPTaxType",
+          "table": "LFAS",
+          "tableField": "TAXTYPE"
+        },
+        {
+          "cds": "I_BUSINESSPARTNERTAXNUMBER",
+          "cdsField": "BPTaxNumber",
+          "table": "LFAS",
+          "tableField": "TAXNUM"
+        },
+        {
+          "cds": "I_BUSINESSPARTNERTAXNUMBER",
+          "cdsField": "BPTaxLongNumber",
+          "table": "LFAS",
+          "tableField": "TAXNUMXL"
+        },
+        {
+          "cds": "I_BUSINESSPARTNERTAXNUMBER",
+          "cdsField": "AuthorizationGroup",
+          "table": "",
+          "tableField": ""
+        }
+      ]
+    },
+    {
+      "cdsName": "I_LANGUAGE",
+      "tableName": "T002",
+      "mapping": [
+        {
+          "cds": "I_LANGUAGE",
+          "cdsField": "Language",
+          "table": "T002",
+          "tableField": "SPRAS"
+        },
+        {
+          "cds": "I_LANGUAGE",
+          "cdsField": "LanguageISOCode",
+          "table": "T002",
+          "tableField": "LAISO"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_LANGUAGETEXT",
+      "tableName": "T002T",
+      "mapping": [
+        {
+          "cds": "I_LANGUAGETEXT",
+          "cdsField": "Language",
+          "table": "T002T",
+          "tableField": "SPRAS"
+        },
+        {
+          "cds": "I_LANGUAGETEXT",
+          "cdsField": "LanguageCode",
+          "table": "T002T",
+          "tableField": "SPRSL"
+        },
+        {
+          "cds": "I_LANGUAGETEXT",
+          "cdsField": "LanguageName",
+          "table": "T002T",
+          "tableField": "SPTXT"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_COUNTRY",
+      "tableName": "T005",
+      "mapping": [
+        {
+          "cds": "I_COUNTRY",
+          "cdsField": "Country",
+          "table": "T005",
+          "tableField": "LAND1"
+        },
+        {
+          "cds": "I_COUNTRY",
+          "cdsField": "CountryThreeLetterISOCode",
+          "table": "T005",
+          "tableField": "INTCA3"
+        },
+        {
+          "cds": "I_COUNTRY",
+          "cdsField": "CountryThreeDigitISOCode",
+          "table": "T005",
+          "tableField": "INTCN3"
+        },
+        {
+          "cds": "I_COUNTRY",
+          "cdsField": "CountryISOCode",
+          "table": "T005",
+          "tableField": "INTCA"
+        },
+        {
+          "cds": "I_COUNTRY",
+          "cdsField": "IsEuropeanUnionMember",
+          "table": "T005",
+          "tableField": "XEGLD"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_COUNTRYTEXT",
+      "tableName": "T005T",
+      "mapping": [
+        {
+          "cds": "I_COUNTRYTEXT",
+          "cdsField": "Country",
+          "table": "T005T",
+          "tableField": "LAND1"
+        },
+        {
+          "cds": "I_COUNTRYTEXT",
+          "cdsField": "Language",
+          "table": "T005T",
+          "tableField": "SPRAS"
+        },
+        {
+          "cds": "I_COUNTRYTEXT",
+          "cdsField": "CountryName",
+          "table": "T005T",
+          "tableField": "LANDX50"
+        },
+        {
+          "cds": "I_COUNTRYTEXT",
+          "cdsField": "NationalityName",
+          "table": "T005T",
+          "tableField": "NATIO"
+        },
+        {
+          "cds": "I_COUNTRYTEXT",
+          "cdsField": "NationalityLongName",
+          "table": "T005T",
+          "tableField": "NATIO50"
+        },
+        {
+          "cds": "I_COUNTRYTEXT",
+          "cdsField": "CountryShortName",
+          "table": "T005T",
+          "tableField": "LANDX"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_UNITOFMEASURE",
+      "tableName": "T006",
+      "mapping": [
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasure",
+          "table": "T006",
+          "tableField": "MSEHI"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureSAPCode",
+          "table": "T006",
+          "tableField": "MSEHI"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureISOCode",
+          "table": "T006",
+          "tableField": "ISOCODE"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "IsPrimaryUnitForISOCode",
+          "table": "T006",
+          "tableField": "PRIMARY"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureNumberOfDecimals",
+          "table": "T006",
+          "tableField": "ANDEC"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureIsCommercial",
+          "table": "T006",
+          "tableField": "KZKEH"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureDimension",
+          "table": "T006",
+          "tableField": "DIMID"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "SIUnitCnvrsnRateNumerator",
+          "table": "T006",
+          "tableField": "ZAEHL"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "SIUnitCnvrsnRateDenominator",
+          "table": "T006",
+          "tableField": "NENNR"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "SIUnitCnvrsnRateExponent",
+          "table": "T006",
+          "tableField": "EXP10"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "SIUnitCnvrsnAdditiveValue",
+          "table": "T006",
+          "tableField": "ADDKO"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureDspExponent",
+          "table": "T006",
+          "tableField": "EXPON"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureDspNmbrOfDcmls",
+          "table": "T006",
+          "tableField": "DECAN"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureTemperature",
+          "table": "T006",
+          "tableField": "TEMP_VALUE"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasureTemperatureUnit",
+          "table": "T006",
+          "tableField": "TEMP_UNIT"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasurePressure",
+          "table": "T006",
+          "tableField": "PRESS_VAL"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasurePressureUnit",
+          "table": "T006",
+          "tableField": "PRESS_UNIT"
+        },
+        {
+          "cds": "I_UNITOFMEASURE",
+          "cdsField": "UnitOfMeasure_E",
+          "table": "",
+          "tableField": ""
+        }
+      ]
+    },
+    {
+      "cdsName": "I_UNITOFMEASURETEXT",
+      "tableName": "T006A",
+      "mapping": [
+        {
+          "cds": "I_UNITOFMEASURETEXT",
+          "cdsField": "Language",
+          "table": "T006A",
+          "tableField": "SPRAS"
+        },
+        {
+          "cds": "I_UNITOFMEASURETEXT",
+          "cdsField": "UnitOfMeasure",
+          "table": "T006A",
+          "tableField": "MSEHI"
+        },
+        {
+          "cds": "I_UNITOFMEASURETEXT",
+          "cdsField": "UnitOfMeasureLongName",
+          "table": "T006A",
+          "tableField": "MSEHL"
+        },
+        {
+          "cds": "I_UNITOFMEASURETEXT",
+          "cdsField": "UnitOfMeasureName",
+          "table": "T006A",
+          "tableField": "MSEHT"
+        },
+        {
+          "cds": "I_UNITOFMEASURETEXT",
+          "cdsField": "UnitOfMeasureTechnicalName",
+          "table": "T006A",
+          "tableField": "MSEH6"
+        },
+        {
+          "cds": "I_UNITOFMEASURETEXT",
+          "cdsField": "UnitOfMeasure_E",
+          "table": "T006A",
+          "tableField": "MSEH3"
+        },
+        {
+          "cds": "I_UNITOFMEASURETEXT",
+          "cdsField": "UnitOfMeasureCommercialName",
+          "table": "T006A",
+          "tableField": "MSEH3"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_UNITOFMEASURECOMMERCIALNAME",
+      "tableName": "T006B",
+      "mapping": [
+        {
+          "cds": "I_UNITOFMEASURECOMMERCIALNAME",
+          "cdsField": "Language",
+          "table": "T006B",
+          "tableField": "SPRAS"
+        },
+        {
+          "cds": "I_UNITOFMEASURECOMMERCIALNAME",
+          "cdsField": "UnitOfMeasureCommercialName",
+          "table": "T006B",
+          "tableField": "MSEH3"
+        },
+        {
+          "cds": "I_UNITOFMEASURECOMMERCIALNAME",
+          "cdsField": "UnitOfMeasure",
+          "table": "T006B",
+          "tableField": "MSEHI"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_UNITOFMEASURETECHNICALNAME",
+      "tableName": "T006C",
+      "mapping": [
+        {
+          "cds": "I_UNITOFMEASURETECHNICALNAME",
+          "cdsField": "Language",
+          "table": "T006C",
+          "tableField": "SPRAS"
+        },
+        {
+          "cds": "I_UNITOFMEASURETECHNICALNAME",
+          "cdsField": "UnitOfMeasureTechnicalName",
+          "table": "T006C",
+          "tableField": "MSEH6"
+        },
+        {
+          "cds": "I_UNITOFMEASURETECHNICALNAME",
+          "cdsField": "UnitOfMeasure",
+          "table": "T006C",
+          "tableField": "MSEHI"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_UNITOFMEASUREDIMENSION",
+      "tableName": "T006D",
+      "mapping": [
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "UnitOfMeasureDimension",
+          "table": "T006D",
+          "tableField": "DIMID"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "LengthExponent",
+          "table": "T006D",
+          "tableField": "LENG"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "MassExponent",
+          "table": "T006D",
+          "tableField": "MASS"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "TimeExponent",
+          "table": "T006D",
+          "tableField": "TIMEX"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "ElectricCurrentExponent",
+          "table": "T006D",
+          "tableField": "ECURR"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "TemperatureExponent",
+          "table": "T006D",
+          "tableField": "TEMP"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "MoleQuantityExponent",
+          "table": "T006D",
+          "tableField": "MOLQU"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "LuminosityExponent",
+          "table": "T006D",
+          "tableField": "LIGHT"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "UnitOFMeasureSiUnit",
+          "table": "T006D",
+          "tableField": "MSSIE"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "HasUnitsWithTemperatureSpec",
+          "table": "T006D",
+          "tableField": "TEMP_DEP"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSION",
+          "cdsField": "HasUnitsWithPressureSpec",
+          "table": "T006D",
+          "tableField": "PRESS_DEP"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_UNITOFMEASUREISOCODE",
+      "tableName": "T006I",
+      "mapping": [
+        {
+          "cds": "I_UNITOFMEASUREISOCODE",
+          "cdsField": "UnitOfMeasureISOCode",
+          "table": "T006I",
+          "tableField": "ISOCODE"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_UNITOFMEASUREISOCODETEXT",
+      "tableName": "T006J",
+      "mapping": [
+        {
+          "cds": "I_UNITOFMEASUREISOCODETEXT",
+          "cdsField": "Language",
+          "table": "T006J",
+          "tableField": "LANGU"
+        },
+        {
+          "cds": "I_UNITOFMEASUREISOCODETEXT",
+          "cdsField": "UnitOfMeasureISOCode",
+          "table": "T006J",
+          "tableField": "ISOCODE"
+        },
+        {
+          "cds": "I_UNITOFMEASUREISOCODETEXT",
+          "cdsField": "UnitOfMeasureISOCodeName",
+          "table": "T006J",
+          "tableField": "ISOTXT"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_UNITOFMEASUREDIMENSIONTEXT",
+      "tableName": "T006T",
+      "mapping": [
+        {
+          "cds": "I_UNITOFMEASUREDIMENSIONTEXT",
+          "cdsField": "Language",
+          "table": "T006T",
+          "tableField": "SPRAS"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSIONTEXT",
+          "cdsField": "UnitOfMeasureDimension",
+          "table": "T006T",
+          "tableField": "DIMID"
+        },
+        {
+          "cds": "I_UNITOFMEASUREDIMENSIONTEXT",
+          "cdsField": "UnitOfMeasureDimensionName",
+          "table": "T006T",
+          "tableField": "TXDIM"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_CUSTABAPOBJDIRECTORYENTRY",
+      "tableName": "TADIR",
+      "mapping": [
+        {
+          "cds": "I_CUSTABAPOBJDIRECTORYENTRY",
+          "cdsField": "ABAPObjectCategory",
+          "table": "TADIR",
+          "tableField": "ABAPOBJECTCATEGORY"
+        },
+        {
+          "cds": "I_CUSTABAPOBJDIRECTORYENTRY",
+          "cdsField": "ABAPObjectType",
+          "table": "TADIR",
+          "tableField": "ABAPOBJECTTYPE"
+        },
+        {
+          "cds": "I_CUSTABAPOBJDIRECTORYENTRY",
+          "cdsField": "ABAPObject",
+          "table": "TADIR",
+          "tableField": "ABAPOBJECT"
+        },
+        {
+          "cds": "I_CUSTABAPOBJDIRECTORYENTRY",
+          "cdsField": "ABAPObjectResponsibleUser",
+          "table": "TADIR",
+          "tableField": "ABAPOBJECTRESPONSIBLEUSER"
+        },
+        {
+          "cds": "I_CUSTABAPOBJDIRECTORYENTRY",
+          "cdsField": "ABAPObjectIsDeleted",
+          "table": "TADIR",
+          "tableField": "ABAPOBJECTISDELETED"
+        },
+        {
+          "cds": "I_CUSTABAPOBJDIRECTORYENTRY",
+          "cdsField": "ABAPPackage",
+          "table": "TADIR",
+          "tableField": "ABAPPACKAGE"
+        },
+        {
+          "cds": "I_CUSTABAPOBJDIRECTORYENTRY",
+          "cdsField": "ABAPSoftwareComponent",
+          "table": "",
+          "tableField": ""
+        }
+      ]
+    },
+    {
+      "cdsName": "I_CURRENCY",
+      "tableName": "TCURC",
+      "mapping": [
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "Currency",
+          "table": "TCURC",
+          "tableField": "WAERS"
+        },
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "Decimals",
+          "table": "",
+          "tableField": ""
+        },
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "CurrencyISOCode",
+          "table": "TCURC",
+          "tableField": "ISOCD"
+        },
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "AlternativeCurrencyKey",
+          "table": "TCURC",
+          "tableField": "ALTWR"
+        },
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "IsPrimaryCurrencyForISOCrcy",
+          "table": "TCURC",
+          "tableField": "XPRIMARY"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_EXCHANGERATEFACTORSRAWDATA",
+      "tableName": "TCURF",
+      "mapping": [
+        {
+          "cds": "I_EXCHANGERATEFACTORSRAWDATA",
+          "cdsField": "ExchangeRateType",
+          "table": "TCURF",
+          "tableField": "KURST"
+        },
+        {
+          "cds": "I_EXCHANGERATEFACTORSRAWDATA",
+          "cdsField": "SourceCurrency",
+          "table": "TCURF",
+          "tableField": "FCURR"
+        },
+        {
+          "cds": "I_EXCHANGERATEFACTORSRAWDATA",
+          "cdsField": "TargetCurrency",
+          "table": "TCURF",
+          "tableField": "TCURR"
+        },
+        {
+          "cds": "I_EXCHANGERATEFACTORSRAWDATA",
+          "cdsField": "ValidityStartDate",
+          "table": "TCURF",
+          "tableField": "CASE GDATU"
+        },
+        {
+          "cds": "I_EXCHANGERATEFACTORSRAWDATA",
+          "cdsField": "NumberOfSourceCurrencyUnits",
+          "table": "TCURF",
+          "tableField": "FFACT"
+        },
+        {
+          "cds": "I_EXCHANGERATEFACTORSRAWDATA",
+          "cdsField": "NumberOfTargetCurrencyUnits",
+          "table": "TCURF",
+          "tableField": "TFACT"
+        },
+        {
+          "cds": "I_EXCHANGERATEFACTORSRAWDATA",
+          "cdsField": "AlternativeExchangeRateType",
+          "table": "TCURF",
+          "tableField": "ABWCT"
+        },
+        {
+          "cds": "I_EXCHANGERATEFACTORSRAWDATA",
+          "cdsField": "AltvExchangeRateTypeValdtyDate",
+          "table": "TCURF",
+          "tableField": "ABWGA"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_EXCHRATEQTANTYPERAWDATA",
+      "tableName": "TCURN",
+      "mapping": [
+        {
+          "cds": "I_EXCHRATEQTANTYPERAWDATA",
+          "cdsField": "SourceCurrency",
+          "table": "TCURN",
+          "tableField": "FCURR"
+        },
+        {
+          "cds": "I_EXCHRATEQTANTYPERAWDATA",
+          "cdsField": "TargetCurrency",
+          "table": "TCURN",
+          "tableField": "TCURR"
+        },
+        {
+          "cds": "I_EXCHRATEQTANTYPERAWDATA",
+          "cdsField": "ValidityStartDate",
+          "table": "TCURN",
+          "tableField": "CASE GDATU"
+        },
+        {
+          "cds": "I_EXCHRATEQTANTYPERAWDATA",
+          "cdsField": "CurrencyQuotationType",
+          "table": "TCURN",
+          "tableField": "NOTATION"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_EXCHANGERATERAWDATA",
+      "tableName": "TCURR",
+      "mapping": [
+        {
+          "cds": "I_EXCHANGERATERAWDATA",
+          "cdsField": "ExchangeRateType",
+          "table": "TCURR",
+          "tableField": "KURST"
+        },
+        {
+          "cds": "I_EXCHANGERATERAWDATA",
+          "cdsField": "SourceCurrency",
+          "table": "TCURR",
+          "tableField": "FCURR"
+        },
+        {
+          "cds": "I_EXCHANGERATERAWDATA",
+          "cdsField": "TargetCurrency",
+          "table": "TCURR",
+          "tableField": "TCURR"
+        },
+        {
+          "cds": "I_EXCHANGERATERAWDATA",
+          "cdsField": "ValidityStartDate",
+          "table": "TCURR",
+          "tableField": "CASE GDATU"
+        },
+        {
+          "cds": "I_EXCHANGERATERAWDATA",
+          "cdsField": "ExchangeRate",
+          "table": "TCURR",
+          "tableField": "UKURS"
+        },
+        {
+          "cds": "I_EXCHANGERATERAWDATA",
+          "cdsField": "NumberOfSourceCurrencyUnits",
+          "table": "TCURR",
+          "tableField": "FFACT"
+        },
+        {
+          "cds": "I_EXCHANGERATERAWDATA",
+          "cdsField": "NumberOfTargetCurrencyUnits",
+          "table": "TCURR",
+          "tableField": "TFACT"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_CURRENCYTEXT",
+      "tableName": "TCURT",
+      "mapping": [
+        {
+          "cds": "I_CURRENCYTEXT",
+          "cdsField": "Language",
+          "table": "TCURT",
+          "tableField": "SPRAS"
+        },
+        {
+          "cds": "I_CURRENCYTEXT",
+          "cdsField": "Currency",
+          "table": "TCURT",
+          "tableField": "WAERS"
+        },
+        {
+          "cds": "I_CURRENCYTEXT",
+          "cdsField": "CurrencyName",
+          "table": "TCURT",
+          "tableField": "LTEXT"
+        },
+        {
+          "cds": "I_CURRENCYTEXT",
+          "cdsField": "CurrencyShortName",
+          "table": "TCURT",
+          "tableField": "KTEXT"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_EXCHANGERATETYPE",
+      "tableName": "TCURV",
+      "mapping": [
+        {
+          "cds": "I_EXCHANGERATETYPE",
+          "cdsField": "ExchangeRateType",
+          "table": "TCURV",
+          "tableField": "KURST"
+        },
+        {
+          "cds": "I_EXCHANGERATETYPE",
+          "cdsField": "ReferenceCurrency",
+          "table": "TCURV",
+          "tableField": "BWAER"
+        },
+        {
+          "cds": "I_EXCHANGERATETYPE",
+          "cdsField": "BuyingRateAvgExchangeRateType",
+          "table": "TCURV",
+          "tableField": "GKUZU"
+        },
+        {
+          "cds": "I_EXCHANGERATETYPE",
+          "cdsField": "InvertedExchangeRateIsAllowed",
+          "table": "TCURV",
+          "tableField": "XINVR"
+        },
+        {
+          "cds": "I_EXCHANGERATETYPE",
+          "cdsField": "SellingRateAvgExchangeRateType",
+          "table": "TCURV",
+          "tableField": "BKUZU"
+        },
+        {
+          "cds": "I_EXCHANGERATETYPE",
+          "cdsField": "FixedExchangeRateIsUsed",
+          "table": "TCURV",
+          "tableField": "XFIXD"
+        },
+        {
+          "cds": "I_EXCHANGERATETYPE",
+          "cdsField": "SpecialConversionIsUsed",
+          "table": "TCURV",
+          "tableField": "XEURO"
+        },
+        {
+          "cds": "I_EXCHANGERATETYPE",
+          "cdsField": "SourceCurrencyIsBaseCurrency",
+          "table": "TCURV",
+          "tableField": "XBWRL"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_CURRENCY",
+      "tableName": "TCURX",
+      "mapping": [
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "Currency",
+          "table": "TCURX",
+          "tableField": "WAERS"
+        },
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "Decimals",
+          "table": "",
+          "tableField": ""
+        },
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "CurrencyISOCode",
+          "table": "TCURX",
+          "tableField": "ISOCD"
+        },
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "AlternativeCurrencyKey",
+          "table": "TCURX",
+          "tableField": "ALTWR"
+        },
+        {
+          "cds": "I_CURRENCY",
+          "cdsField": "IsPrimaryCurrencyForISOCrcy",
+          "table": "TCURX",
+          "tableField": "XPRIMARY"
+        }
+      ]
+    },
+    {
+      "cdsName": "I_CUSTABAPPACKAGE",
+      "tableName": "TDEVC",
+      "mapping": [
+        {
+          "cds": "I_CUSTABAPPACKAGE",
+          "cdsField": "ABAPPackage",
+          "table": "TDEVC",
+          "tableField": "ABAPPACKAGE"
+        },
+        {
+          "cds": "I_CUSTABAPPACKAGE",
+          "cdsField": "ABAPPackageResponsibleUser",
+          "table": "TDEVC",
+          "tableField": "ABAPPACKAGERESPONSIBLEUSER"
+        },
+        {
+          "cds": "I_CUSTABAPPACKAGE",
+          "cdsField": "ABAPSoftwareComponent",
+          "table": "TDEVC",
+          "tableField": "ABAPSOFTWARECOMPONENT"
+        },
+        {
+          "cds": "I_CUSTABAPPACKAGE",
+          "cdsField": "ABAPNamespace",
+          "table": "TDEVC",
+          "tableField": "ABAPNAMESPACE"
+        },
+        {
+          "cds": "I_CUSTABAPPACKAGE",
+          "cdsField": "CreatedByUser",
+          "table": "TDEVC",
+          "tableField": "CREATEDBYUSER"
+        },
+        {
+          "cds": "I_CUSTABAPPACKAGE",
+          "cdsField": "CreationDate",
+          "table": "TDEVC",
+          "tableField": "CREATIONDATE"
+        },
+        {
+          "cds": "I_CUSTABAPPACKAGE",
+          "cdsField": "LastChangedByUser",
+          "table": "TDEVC",
+          "tableField": "LASTCHANGEDBYUSER"
+        },
+        {
+          "cds": "I_CUSTABAPPACKAGE",
+          "cdsField": "LastChangeDate",
+          "table": "TDEVC",
+          "tableField": "LASTCHANGEDATE"
+        }
+      ]
+    }
+  ]
