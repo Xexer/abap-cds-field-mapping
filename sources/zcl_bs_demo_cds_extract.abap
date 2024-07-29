@@ -5,6 +5,8 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
   PUBLIC SECTION.
     INTERFACES if_oo_adt_classrun.
 
+    TYPES td_reason TYPE c LENGTH 15.
+
     TYPES: BEGIN OF ts_object,
              cds   TYPE sxco_cds_object_name,
              table TYPE string,
@@ -28,6 +30,13 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
 
     TYPES tt_r_cds   TYPE RANGE OF sxco_cds_object_name.
     TYPES tt_r_table TYPE RANGE OF string.
+
+    CONSTANTS: BEGIN OF cs_reason,
+                 fixed_value          TYPE td_reason VALUE 'FIXED',
+                 unknown_query        TYPE td_reason VALUE 'UNKNOWN',
+                 unsupported_function TYPE td_reason VALUE 'UNSUPPORTED',
+                 content_error        TYPE td_reason VALUE 'CONTENT_ERROR',
+               END OF cs_reason.
 
     "! Get Mapping in JSON format for output
     "! @parameter it_r_cds   | Filter for CDS
@@ -88,8 +97,31 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
              objectreleaseinfo TYPE tt_object_info,
            END OF ts_cr.
 
+    TYPES: BEGIN OF ts_function,
+             name    TYPE string,
+             content TYPE string,
+             full    TYPE string,
+           END OF ts_function.
+    TYPES tt_function TYPE STANDARD TABLE OF ts_function WITH EMPTY KEY.
+
     CONSTANTS c_url_cloudification_repo TYPE string VALUE `https://raw.githubusercontent.com/SAP/abap-atc-cr-cv-s4hc/main/src/objectReleaseInfoLatest.json`.
     CONSTANTS c_url_mappings            TYPE string VALUE `https://raw.githubusercontent.com/Xexer/abap-cds-field-mapping/main/mapping/core-data-services.json`.
+
+    CONSTANTS: BEGIN OF cs_supported_function,
+                 case          TYPE string VALUE 'CASE',
+                 abs           TYPE string VALUE 'ABS',
+                 cast          TYPE string VALUE 'CAST',
+                 div           TYPE string VALUE `DIVISION`,
+                 lpad          TYPE string VALUE `LPAD`,
+                 coalesce      TYPE string VALUE `COALESCE`,
+                 round         TYPE string VALUE `ROUND`,
+                 substring     TYPE string VALUE `SUBSTRING`,
+                 data_dec      TYPE string VALUE `ABAP.DEC`,
+                 data_char     TYPE string VALUE `ABAP.CHAR`,
+                 dats_to_tstmp TYPE string VALUE `DATS_TIMS_TO_TSTMP`,
+               END OF cs_supported_function.
+
+    DATA mt_error TYPE string_table.
 
     METHODS get_table_fields_from_cds
       IMPORTING id_cds           TYPE sxco_cds_object_name
@@ -99,17 +131,13 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
 
     METHODS get_field_value
       IMPORTING io_expression    TYPE REF TO if_xco_ddl_expression
+                is_content       TYPE if_xco_cds_view_content=>ts_content
       RETURNING VALUE(rd_result) TYPE string.
 
     METHODS find_table_field
       IMPORTING it_mapping       TYPE tt_mapping
                 is_source        TYPE ts_mapping
                 id_table         TYPE string
-      RETURNING VALUE(rd_result) TYPE string.
-
-    METHODS cleanup_field
-      IMPORTING id_field         TYPE string
-                is_content       TYPE if_xco_cds_view_content=>ts_content
       RETURNING VALUE(rd_result) TYPE string.
 
     METHODS replace_alias
@@ -126,14 +154,35 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
     METHODS get_content_form_url
       IMPORTING id_url           TYPE string
       RETURNING VALUE(rd_result) TYPE string.
+
+    METHODS add_error
+      IMPORTING id_reason TYPE td_reason
+                id_value  TYPE any OPTIONAL.
+
+    METHODS replace_cds_functions
+      IMPORTING id_field         TYPE string
+      RETURNING VALUE(rd_result) TYPE string.
+
+    METHODS extract_functions
+      IMPORTING id_field         TYPE string
+      RETURNING VALUE(rt_result) TYPE tt_function.
+
+    METHODS is_supported_function
+      IMPORTING id_function      TYPE string
+      RETURNING VALUE(rd_result) TYPE abap_bool.
+
+    METHODS get_function_name
+      IMPORTING id_start         TYPE i
+                id_field         TYPE string
+      RETURNING VALUE(rd_result) TYPE string.
 ENDCLASS.
 
 
 CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    DATA ls_fixed   TYPE ts_object.
     DATA lt_r_cds   TYPE tt_r_cds.
     DATA lt_r_table TYPE tt_r_table.
+    DATA ls_fixed   TYPE ts_object.
 
     " Read a specific entity from repository
 *    INSERT VALUE #( sign   = 'I'
@@ -141,13 +190,17 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 *                    low    = 'I_BUSINESSPARTNER' ) INTO TABLE lt_r_cds.
 
     " Read a fixed pair, without repository
-*    ls_fixed = VALUE #( cds   = 'I_ACADEMICTITLE'
-*                        table = 'TSAD2' ).
+*    ls_fixed = VALUE #( cds   = 'I_OPERATIONALACCTGDOCITEM'
+*                        table = 'BSEG' ).
 
     DATA(ld_json) = get_mapping_in_json_format( it_r_cds   = lt_r_cds
                                                 it_r_table = lt_r_table
                                                 is_fixed   = ls_fixed ).
     out->write( ld_json ).
+
+    IF mt_error IS NOT INITIAL.
+      out->write( mt_error ).
+    ENDIF.
   ENDMETHOD.
 
 
@@ -156,9 +209,9 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
                                           it_r_table = it_r_table
                                           is_fixed   = is_fixed ).
 
-    RETURN /ui2/cl_json=>serialize( data          = lt_repo
-                                    pretty_name   = /ui2/cl_json=>pretty_mode-camel_case
-                                    format_output = abap_true ).
+    rd_result = /ui2/cl_json=>serialize( data          = lt_repo
+                                         pretty_name   = /ui2/cl_json=>pretty_mode-camel_case
+                                         format_output = abap_true ).
   ENDMETHOD.
 
 
@@ -224,17 +277,30 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 
 
   METHOD get_content_form_url.
-    TRY.
-        DATA(lo_destination) = cl_http_destination_provider=>create_by_url( id_url ).
-        DATA(lo_client) = cl_web_http_client_manager=>create_by_http_destination( lo_destination ).
-        DATA(lo_response) = lo_client->execute( i_method = if_web_http_client=>get ).
+    " BTP Connection
+*    TRY.
+*        DATA(lo_destination) = cl_http_destination_provider=>create_by_url( id_url ).
+*        DATA(lo_client) = cl_web_http_client_manager=>create_by_http_destination( lo_destination ).
+*        DATA(lo_response) = lo_client->execute( i_method = if_web_http_client=>get ).
+*
+*      CATCH cx_root.
+*        RETURN.
+*    ENDTRY.
+*
+*    IF lo_response->get_status( )-code = 200.
+*      rd_result = lo_response->get_text( ).
+*    ENDIF.
 
-      CATCH cx_root.
-        RETURN.
-    ENDTRY.
+    " On-Premise Connection
+    cl_http_client=>create_by_url( EXPORTING url    = id_url
+                                   IMPORTING client = DATA(lo_client) ).
 
-    IF lo_response->get_status( )-code = 200.
-      rd_result = lo_response->get_text( ).
+    lo_client->send( ).
+    lo_client->receive( ).
+    lo_client->response->get_status( IMPORTING code = DATA(ld_code) ).
+
+    IF ld_code = 200.
+      rd_result = lo_client->response->get_cdata( ).
     ENDIF.
   ENDMETHOD.
 
@@ -270,7 +336,12 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
       RETURN.
     ENDIF.
 
-    DATA(ls_view_entity_content) = lo_cds->content( )->get( ).
+    TRY.
+        DATA(ls_view_entity_content) = lo_cds->content( )->get( ).
+      CATCH cx_root.
+        add_error( id_reason = cs_reason-content_error
+                   id_value  = id_cds ).
+    ENDTRY.
 
     LOOP AT lo_cds->fields->all->get( ) INTO DATA(lo_field).
       DATA(ls_field) = lo_field->content( )->get( ).
@@ -284,13 +355,13 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
         ld_field = to_upper( ld_field ).
       ENDIF.
 
-      DATA(ld_new_field) = get_field_value( ls_field-expression ).
+      DATA(ld_new_field) = get_field_value( io_expression = ls_field-expression
+                                            is_content    = ls_view_entity_content ).
 
       INSERT VALUE #( cds         = id_cds
                       cds_field   = ld_field
                       table       = to_upper( ls_view_entity_content-data_source-entity )
-                      table_field = cleanup_field( id_field   = ld_new_field
-                                                   is_content = ls_view_entity_content ) )
+                      table_field = ld_new_field )
              INTO TABLE rt_result.
     ENDLOOP.
 
@@ -306,31 +377,38 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 
   METHOD get_field_value.
     IF io_expression IS INITIAL.
-      RETURN ``.
+      RETURN.
     ENDIF.
 
     DATA(lo_strings) = io_expression->if_xco_text~get_lines( ).
-    DATA(lt_strings) = lo_strings->value.
-    DATA(ld_result) = ``.
+    DATA(ld_result) = concat_lines_of( table = lo_strings->value
+                                       sep   = ` ` ).
 
-    IF line_exists( lt_strings[ 1 ] ).
-      ld_result = lt_strings[ 1 ].
+    ld_result = replace_cds_functions( to_upper( ld_result ) ).
+
+    IF ld_result CS cs_supported_function-case.
+      CLEAR ld_result.
+      RETURN.
     ENDIF.
 
-*      IF ld_result CS `concat(`.
-*        BREAK-POINT.
-*      ENDIF.
-
-    IF ld_result CS `cast(`.
-      SPLIT ld_result AT ` ` INTO TABLE DATA(lt_split).
-      RETURN lt_split[ 2 ].
+    IF ld_result CS `(` OR ld_result CS `)`.
+      add_error( id_reason = cs_reason-unknown_query
+                 id_value  = ld_result ).
+      CLEAR ld_result.
+      RETURN.
     ENDIF.
 
-    IF ld_result CS `case(`.
-      RETURN ``.
+    IF ld_result CS `'`.
+      add_error( id_reason = cs_reason-fixed_value
+                 id_value  = ld_result ).
+      CLEAR ld_result.
+      RETURN.
     ENDIF.
 
-    RETURN ld_result.
+    ld_result = replace_alias( id_field   = ld_result
+                               is_content = is_content ).
+
+    rd_result = to_upper( ld_result ).
   ENDMETHOD.
 
 
@@ -340,14 +418,16 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 
     DO.
       IF ls_actual-table = id_table.
-        RETURN ls_actual-table_field.
+        rd_result = ls_actual-table_field.
+        RETURN.
       ENDIF.
 
       TRY.
           ls_actual = it_mapping[ cds       = ls_actual-table
                                   cds_field = ls_actual-table_field ].
         CATCH cx_sy_itab_line_not_found.
-          RETURN ld_last_field.
+          rd_result = ld_last_field.
+          RETURN.
       ENDTRY.
 
       IF ls_actual-table_field IS NOT INITIAL.
@@ -357,48 +437,152 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   ENDMETHOD.
 
 
-  METHOD cleanup_field.
-    DATA(ld_field) = replace_alias( id_field   = id_field
-                                    is_content = is_content ).
-
-    ld_field = to_upper( ld_field ).
-
-    IF ld_field CS `ABS(`.
-      ld_field = replace( val  = ld_field
-                          sub  = `ABS(`
-                          with = `` ).
-      ld_field = replace( val  = ld_field
-                          sub  = `)`
-                          with = `` ).
-    ENDIF.
-
-    IF ld_field CS `'`.
-      CLEAR ld_field.
-    ENDIF.
-
-    RETURN ld_field.
-  ENDMETHOD.
-
-
   METHOD replace_alias.
     DATA(ld_field) = id_field.
 
     IF NOT ld_field CS `.`.
-      RETURN ld_field.
+      rd_result = ld_field.
+      RETURN.
     ENDIF.
 
     DATA(lt_replace) = VALUE string_table( ( CONV #( is_content-data_source-alias ) )
                                            ( CONV #( is_content-data_source-entity ) ) ).
 
     LOOP AT lt_replace INTO DATA(ld_replace) WHERE table_line IS NOT INITIAL.
-      DATA(ld_new) = replace( val  = ld_field
+      DATA(ld_new) = replace( val  = to_upper( ld_field )
                               sub  = |{ ld_replace }.|
                               with = `` ).
       IF ld_field <> ld_new.
-        RETURN ld_new.
+        rd_result = ld_new.
+        RETURN.
       ENDIF.
     ENDLOOP.
 
-    RETURN ``.
+    CLEAR rd_result.
+  ENDMETHOD.
+
+
+  METHOD add_error.
+    IF id_value IS INITIAL.
+      INSERT |{ id_reason }: No value| INTO TABLE mt_error.
+    ELSE.
+      INSERT |{ id_reason }: { id_value }| INTO TABLE mt_error.
+    ENDIF.
+  ENDMETHOD.
+
+
+  METHOD replace_cds_functions.
+    DATA lt_split TYPE string_table.
+
+    rd_result = id_field.
+
+    IF NOT rd_result CS `(` AND NOT rd_result CS `)`.
+      RETURN.
+    ENDIF.
+
+    DATA(lt_function) = extract_functions( rd_result ).
+
+    LOOP AT lt_function INTO DATA(ls_function) STEP -1.
+      CASE ls_function-name.
+        WHEN cs_supported_function-cast.
+          SPLIT ls_function-content AT ` ` INTO TABLE lt_split.
+          IF line_exists( lt_split[ 1 ] ).
+            rd_result = lt_split[ 1 ].
+            RETURN.
+          ENDIF.
+
+        WHEN cs_supported_function-lpad.
+          SPLIT ls_function-content AT `,` INTO TABLE lt_split.
+          IF line_exists( lt_split[ 1 ] ).
+            rd_result = lt_split[ 1 ].
+            RETURN.
+          ENDIF.
+
+        WHEN cs_supported_function-abs.
+          rd_result = ls_function-content.
+          RETURN.
+
+      ENDCASE.
+    ENDLOOP.
+  ENDMETHOD.
+
+
+  METHOD extract_functions.
+    DATA(ld_field) = id_field.
+    DATA(ld_counter) = 0.
+
+    IF ld_field CS cs_supported_function-case.
+      RETURN.
+    ENDIF.
+
+    WHILE ld_counter < 15.
+      DATA(ld_start) = find( val = ld_field
+                             sub = `(`
+                             occ = 1 ).
+      DATA(ld_end) = find( val = ld_field
+                           sub = `)`
+                           occ = -1 ).
+
+      IF ld_start = -1 OR ld_end = -1.
+        EXIT.
+      ENDIF.
+
+      DATA(ls_function) = VALUE ts_function( full    = ld_field
+                                             content = substring( val = ld_field
+                                                                  off = ld_start + 1
+                                                                  len = ld_end - ld_start - 1 )
+                                             name    = get_function_name( id_start = ld_start
+                                                                          id_field = ld_field ) ).
+
+      IF NOT is_supported_function( ls_function-name ).
+        EXIT.
+      ENDIF.
+
+      INSERT ls_function INTO TABLE rt_result.
+      ld_field = ls_function-content.
+      ld_counter += 1.
+    ENDWHILE.
+  ENDMETHOD.
+
+
+  METHOD get_function_name.
+    DATA(lt_signs) = VALUE string_table( ( ` ` ) ( `,` ) ( `(` ) ).
+
+    LOOP AT lt_signs INTO DATA(ld_sign).
+      DATA(ld_space) = find( val = id_field
+                             sub = ld_sign
+                             off = id_start - 1
+                             occ = -1 ).
+
+      IF ld_space <> -1.
+        rd_result = substring( val = id_field
+                               off = ld_space + 1
+                               len = id_start - ld_space - 1 ).
+      ENDIF.
+    ENDLOOP.
+
+    IF rd_result IS INITIAL.
+      rd_result = substring( val = id_field
+                             len = id_start ).
+    ENDIF.
+
+    rd_result = replace( val  = rd_result
+                         sub  = ` `
+                         with = `` ).
+  ENDMETHOD.
+
+
+  METHOD is_supported_function.
+    CASE id_function.
+      WHEN cs_supported_function-abs OR cs_supported_function-cast OR cs_supported_function-div OR cs_supported_function-lpad.
+        rd_result = abap_true.
+      WHEN cs_supported_function-coalesce OR cs_supported_function-data_char OR cs_supported_function-data_dec
+      OR cs_supported_function-dats_to_tstmp OR cs_supported_function-substring OR cs_supported_function-round.
+        rd_result = abap_false.
+      WHEN OTHERS.
+        add_error( id_reason = cs_reason-unsupported_function
+                   id_value  = id_function ).
+        rd_result = abap_false.
+    ENDCASE.
   ENDMETHOD.
 ENDCLASS.
