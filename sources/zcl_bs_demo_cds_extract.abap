@@ -180,9 +180,9 @@ ENDCLASS.
 
 CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
+    DATA ls_fixed   TYPE ts_object.
     DATA lt_r_cds   TYPE tt_r_cds.
     DATA lt_r_table TYPE tt_r_table.
-    DATA ls_fixed   TYPE ts_object.
 
     " Read a specific entity from repository
 *    INSERT VALUE #( sign   = 'I'
@@ -190,8 +190,8 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 *                    low    = 'I_BUSINESSPARTNER' ) INTO TABLE lt_r_cds.
 
     " Read a fixed pair, without repository
-*    ls_fixed = VALUE #( cds   = 'I_OPERATIONALACCTGDOCITEM'
-*                        table = 'BSEG' ).
+    ls_fixed = VALUE #( cds   = 'I_WORKCENTER'
+                        table = 'CRHD' ).
 
     DATA(ld_json) = get_mapping_in_json_format( it_r_cds   = lt_r_cds
                                                 it_r_table = lt_r_table
@@ -246,9 +246,9 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
         TRY.
             DATA(ls_mapping) = lt_mapping[ cds_name   = ls_successor-tadirobjname
                                            table_name = ls_object-tadirobjname ].
-            IF     ls_mapping-mapping            IS NOT INITIAL
-               AND ls_successor-tadirobjname NOT IN it_r_cds
-               AND ls_object-tadirobjname NOT    IN it_r_table.
+            IF    ls_mapping-mapping IS NOT INITIAL
+               OR (     ls_successor-tadirobjname NOT IN it_r_cds
+                    AND ls_object-tadirobjname NOT    IN it_r_table ).
               CONTINUE.
             ENDIF.
 
@@ -449,8 +449,8 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
                                            ( CONV #( is_content-data_source-entity ) ) ).
 
     LOOP AT lt_replace INTO DATA(ld_replace) WHERE table_line IS NOT INITIAL.
-      DATA(ld_new) = replace( val  = to_upper( ld_field )
-                              sub  = |{ ld_replace }.|
+      DATA(ld_new) = replace( val  = ld_field
+                              sub  = |{ to_upper( ld_replace ) }.|
                               with = `` ).
       IF ld_field <> ld_new.
         rd_result = ld_new.
