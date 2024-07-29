@@ -14,9 +14,7 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
     TYPES tt_object TYPE STANDARD TABLE OF ts_object WITH EMPTY KEY.
 
     TYPES: BEGIN OF ts_mapping,
-             cds         TYPE sxco_cds_object_name,
              cds_field   TYPE string,
-             table       TYPE string,
              table_field TYPE string,
            END OF ts_mapping.
     TYPES tt_mapping TYPE STANDARD TABLE OF ts_mapping WITH EMPTY KEY.
@@ -79,6 +77,21 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
       RETURNING VALUE(rt_result) TYPE tt_mapping.
 
   PRIVATE SECTION.
+    TYPES: BEGIN OF ts_mapping_intern,
+             cds         TYPE sxco_cds_object_name,
+             cds_field   TYPE string,
+             table       TYPE string,
+             table_field TYPE string,
+           END OF ts_mapping_intern.
+    TYPES tt_mapping_intern TYPE STANDARD TABLE OF ts_mapping_intern WITH EMPTY KEY.
+
+    TYPES: BEGIN OF ts_repo_intern,
+             cds_name   TYPE sxco_cds_object_name,
+             table_name TYPE string,
+             mapping    TYPE tt_mapping_intern,
+           END OF ts_repo_intern.
+    TYPES tt_repo_intern TYPE STANDARD TABLE OF ts_repo_intern WITH EMPTY KEY.
+
     TYPES: BEGIN OF ts_successor,
              tadirobject  TYPE string,
              tadirobjname TYPE string,
@@ -127,7 +140,7 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
       IMPORTING id_cds           TYPE sxco_cds_object_name
                 id_table         TYPE string
                 id_toupper       TYPE abap_bool
-      RETURNING VALUE(rt_result) TYPE tt_mapping.
+      RETURNING VALUE(rt_result) TYPE tt_mapping_intern.
 
     METHODS get_field_value
       IMPORTING io_expression    TYPE REF TO if_xco_ddl_expression
@@ -135,8 +148,8 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
       RETURNING VALUE(rd_result) TYPE string.
 
     METHODS find_table_field
-      IMPORTING it_mapping       TYPE tt_mapping
-                is_source        TYPE ts_mapping
+      IMPORTING it_mapping       TYPE tt_mapping_intern
+                is_source        TYPE ts_mapping_intern
                 id_table         TYPE string
       RETURNING VALUE(rd_result) TYPE string.
 
@@ -149,7 +162,7 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
       RETURNING VALUE(rs_result) TYPE ts_cr.
 
     METHODS read_mappings
-      RETURNING VALUE(rt_result) TYPE tt_repo.
+      RETURNING VALUE(rt_result) TYPE tt_repo_intern.
 
     METHODS get_content_form_url
       IMPORTING id_url           TYPE string
@@ -180,9 +193,9 @@ ENDCLASS.
 
 CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    DATA ls_fixed   TYPE ts_object.
     DATA lt_r_cds   TYPE tt_r_cds.
     DATA lt_r_table TYPE tt_r_table.
+    DATA ls_fixed   TYPE ts_object.
 
     " Read a specific entity from repository
 *    INSERT VALUE #( sign   = 'I'
@@ -190,8 +203,8 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 *                    low    = 'I_BUSINESSPARTNER' ) INTO TABLE lt_r_cds.
 
     " Read a fixed pair, without repository
-    ls_fixed = VALUE #( cds   = 'I_WORKCENTER'
-                        table = 'CRHD' ).
+*    ls_fixed = VALUE #( cds   = 'I_WORKCENTER'
+*                        table = 'CRHD' ).
 
     DATA(ld_json) = get_mapping_in_json_format( it_r_cds   = lt_r_cds
                                                 it_r_table = lt_r_table
@@ -240,6 +253,7 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   METHOD get_relevant_objs_from_repo.
     DATA(ls_cr) = read_cloudification_repository( ).
     DATA(lt_mapping) = read_mappings( ).
+    CLEAR lt_mapping.
 
     LOOP AT ls_cr-objectreleaseinfo INTO DATA(ls_object) WHERE tadirobject = 'TABL' AND tadirobjname IN it_r_table.
       LOOP AT ls_object-successors INTO DATA(ls_successor) WHERE tadirobject = 'DDLS' AND tadirobjname IN it_r_cds.
@@ -311,18 +325,11 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
                                                   id_toupper = abap_false ).
 
     LOOP AT lt_mapping INTO DATA(ls_mapping) WHERE cds = id_cds AND cds_field IS NOT INITIAL.
-      DATA(ld_table) = id_table.
       DATA(ld_field) = find_table_field( it_mapping = lt_mapping
                                          is_source  = ls_mapping
                                          id_table   = id_table ).
 
-      IF ld_field IS INITIAL.
-        CLEAR ld_table.
-      ENDIF.
-
-      INSERT VALUE #( cds         = ls_mapping-cds
-                      cds_field   = ls_mapping-cds_field
-                      table       = ld_table
+      INSERT VALUE #( cds_field   = ls_mapping-cds_field
                       table_field = ld_field )
              INTO TABLE rt_result.
     ENDLOOP.
@@ -486,12 +493,11 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
       CASE ls_function-name.
         WHEN cs_supported_function-cast.
           SPLIT ls_function-content AT ` ` INTO TABLE lt_split.
-          IF line_exists( lt_split[ 1 ] ).
-            rd_result = lt_split[ 1 ].
+          LOOP AT lt_split INTO rd_result WHERE table_line IS NOT INITIAL.
             RETURN.
-          ENDIF.
+          ENDLOOP.
 
-        WHEN cs_supported_function-lpad.
+        WHEN cs_supported_function-lpad OR cs_supported_function-substring.
           SPLIT ls_function-content AT `,` INTO TABLE lt_split.
           IF line_exists( lt_split[ 1 ] ).
             rd_result = lt_split[ 1 ].
@@ -574,10 +580,10 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 
   METHOD is_supported_function.
     CASE id_function.
-      WHEN cs_supported_function-abs OR cs_supported_function-cast OR cs_supported_function-div OR cs_supported_function-lpad.
+      WHEN cs_supported_function-abs OR cs_supported_function-cast OR cs_supported_function-div OR cs_supported_function-lpad OR cs_supported_function-substring.
         rd_result = abap_true.
       WHEN cs_supported_function-coalesce OR cs_supported_function-data_char OR cs_supported_function-data_dec
-      OR cs_supported_function-dats_to_tstmp OR cs_supported_function-substring OR cs_supported_function-round.
+      OR cs_supported_function-dats_to_tstmp OR cs_supported_function-round.
         rd_result = abap_false.
       WHEN OTHERS.
         add_error( id_reason = cs_reason-unsupported_function
