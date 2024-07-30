@@ -421,7 +421,6 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 
   METHOD find_table_field.
     DATA(ls_actual) = is_source.
-    DATA(ld_last_field) = ls_actual-table_field.
 
     DO.
       IF ls_actual-table = id_table.
@@ -433,13 +432,9 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
           ls_actual = it_mapping[ cds       = ls_actual-table
                                   cds_field = ls_actual-table_field ].
         CATCH cx_sy_itab_line_not_found.
-          rd_result = ld_last_field.
+          CLEAR rd_result.
           RETURN.
       ENDTRY.
-
-      IF ls_actual-table_field IS NOT INITIAL.
-        ld_last_field = ls_actual-table_field.
-      ENDIF.
     ENDDO.
   ENDMETHOD.
 
