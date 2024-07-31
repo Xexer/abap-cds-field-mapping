@@ -188,14 +188,19 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
       IMPORTING id_start         TYPE i
                 id_field         TYPE string
       RETURNING VALUE(rd_result) TYPE string.
+
+    METHODS get_fields_n_content_from_cds
+      IMPORTING id_cds     TYPE sxco_cds_object_name
+      EXPORTING et_fields  TYPE sxco_t_cds_fields
+                es_content TYPE if_xco_cds_view_content=>ts_content.
 ENDCLASS.
 
 
 CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
+    DATA ls_fixed   TYPE ts_object.
     DATA lt_r_cds   TYPE tt_r_cds.
     DATA lt_r_table TYPE tt_r_table.
-    DATA ls_fixed   TYPE ts_object.
 
     " Read a specific entity from repository
 *    INSERT VALUE #( sign   = 'I'
@@ -203,8 +208,8 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 *                    low    = 'I_BUSINESSPARTNER' ) INTO TABLE lt_r_cds.
 
     " Read a fixed pair, without repository
-*    ls_fixed = VALUE #( cds   = 'I_WORKCENTER'
-*                        table = 'CRHD' ).
+*    ls_fixed = VALUE #( cds   = 'I_CADOCUMENTBPITEMPHYSICAL'
+*                        table = 'DFKKOP' ).
 
     DATA(ld_json) = get_mapping_in_json_format( it_r_cds   = lt_r_cds
                                                 it_r_table = lt_r_table
@@ -253,7 +258,6 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   METHOD get_relevant_objs_from_repo.
     DATA(ls_cr) = read_cloudification_repository( ).
     DATA(lt_mapping) = read_mappings( ).
-    CLEAR lt_mapping.
 
     LOOP AT ls_cr-objectreleaseinfo INTO DATA(ls_object) WHERE tadirobject = 'TABL' AND tadirobjname IN it_r_table.
       LOOP AT ls_object-successors INTO DATA(ls_successor) WHERE tadirobject = 'DDLS' AND tadirobjname IN it_r_cds.
@@ -337,47 +341,73 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 
 
   METHOD get_table_fields_from_cds.
-    DATA(lo_cds) = xco_cp_cds=>view( id_cds ).
+    get_fields_n_content_from_cds( EXPORTING id_cds     = id_cds
+                                   IMPORTING et_fields  = DATA(lt_fields)
+                                             es_content = DATA(ls_content) ).
 
-    IF NOT lo_cds->exists( ).
-      RETURN.
-    ENDIF.
-
-    TRY.
-        DATA(ls_view_entity_content) = lo_cds->content( )->get( ).
-      CATCH cx_root.
-        add_error( id_reason = cs_reason-content_error
-                   id_value  = id_cds ).
-    ENDTRY.
-
-    LOOP AT lo_cds->fields->all->get( ) INTO DATA(lo_field).
+    LOOP AT lt_fields INTO DATA(lo_field).
       DATA(ls_field) = lo_field->content( )->get( ).
       DATA(ld_field) = ls_field-alias.
+      DATA(ld_cds) = id_cds.
 
       IF ld_field IS INITIAL.
         ld_field = ls_field-original_name.
       ENDIF.
 
+      IF ld_field IS INITIAL.
+        CONTINUE.
+      ENDIF.
+
       IF id_toupper = abap_true.
         ld_field = to_upper( ld_field ).
+        ld_cds = to_upper( ld_cds ).
       ENDIF.
 
       DATA(ld_new_field) = get_field_value( io_expression = ls_field-expression
-                                            is_content    = ls_view_entity_content ).
+                                            is_content    = ls_content ).
 
-      INSERT VALUE #( cds         = id_cds
+      INSERT VALUE #( cds         = ld_cds
                       cds_field   = ld_field
-                      table       = to_upper( ls_view_entity_content-data_source-entity )
+                      table       = to_upper( ls_content-data_source-entity )
                       table_field = ld_new_field )
              INTO TABLE rt_result.
     ENDLOOP.
 
-    IF to_upper( ls_view_entity_content-data_source-entity ) = id_table OR ls_view_entity_content-data_source-entity IS INITIAL.
+    IF to_upper( ls_content-data_source-entity ) = id_table OR ls_content-data_source-entity IS INITIAL.
       RETURN.
     ELSE.
-      INSERT LINES OF get_table_fields_from_cds( id_cds     = ls_view_entity_content-data_source-entity
+      INSERT LINES OF get_table_fields_from_cds( id_cds     = ls_content-data_source-entity
                                                  id_table   = id_table
                                                  id_toupper = abap_true ) INTO TABLE rt_result.
+    ENDIF.
+  ENDMETHOD.
+
+
+  METHOD get_fields_n_content_from_cds.
+    CLEAR: es_content, et_fields.
+
+    " In BTP use xco_cp_cds for released objects
+    DATA(lo_cds) = xco_cds=>view( id_cds ).
+
+    IF lo_cds->exists( ).
+      TRY.
+          es_content = lo_cds->content( )->get( ).
+          et_fields = lo_cds->fields->all->get( ).
+
+        CATCH cx_root.
+          add_error( id_reason = cs_reason-content_error
+                     id_value  = id_cds ).
+          CLEAR: es_content, et_fields.
+      ENDTRY.
+
+      RETURN.
+    ENDIF.
+
+    DATA(lo_entity) = xco_cds=>view_entity( id_cds ).
+
+    IF lo_entity->exists( ).
+      et_fields = lo_entity->fields->all->get( ).
+      es_content = lo_entity->content( )->get( ).
     ENDIF.
   ENDMETHOD.
 
