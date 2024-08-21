@@ -2,6 +2,7 @@
   {
     "cdsName": "I_JOURNALENTRYITEM",
     "tableName": "ACDOCA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SourceLedger",
@@ -1664,6 +1665,7 @@
   {
     "cdsName": "I_GLACCOUNTLINEITEMRAWDATA",
     "tableName": "ACDOCA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SourceLedger",
@@ -3198,6 +3200,7 @@
   {
     "cdsName": "I_MANUFACTURINGORDER",
     "tableName": "AFKO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ManufacturingOrder",
@@ -3744,6 +3747,7 @@
   {
     "cdsName": "I_MANUFACTURINGORDERITEM",
     "tableName": "AFPO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ManufacturingOrder",
@@ -4146,6 +4150,7 @@
   {
     "cdsName": "I_MFGORDERCONFIRMATION",
     "tableName": "AFRU",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MfgOrderConfirmationGroup",
@@ -4596,6 +4601,7 @@
   {
     "cdsName": "I_MANUFACTURINGORDEROPERATION",
     "tableName": "AFVC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MfgOrderInternalID",
@@ -5690,6 +5696,7 @@
   {
     "cdsName": "I_MANUFACTURINGORDEROPERATION",
     "tableName": "AFVU",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MfgOrderInternalID",
@@ -6784,6 +6791,7 @@
   {
     "cdsName": "I_MANUFACTURINGORDEROPERATION",
     "tableName": "AFVV",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MfgOrderInternalID",
@@ -7878,6 +7886,7 @@
   {
     "cdsName": "I_ORDER",
     "tableName": "AUFK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "OrderID",
@@ -7932,6 +7941,7 @@
   {
     "cdsName": "I_JOURNALENTRY",
     "tableName": "BKPF",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CompanyCode",
@@ -8278,6 +8288,7 @@
   {
     "cdsName": "I_BANK_2",
     "tableName": "BNKA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BankCountry",
@@ -8372,6 +8383,7 @@
   {
     "cdsName": "I_ONETIMEACCOUNTCUSTOMER",
     "tableName": "BSEC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CompanyCode",
@@ -8486,6 +8498,7 @@
   {
     "cdsName": "I_BILLOFEXCHANGE",
     "tableName": "BSED",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CompanyCode",
@@ -8588,6 +8601,7 @@
   {
     "cdsName": "I_OPERATIONALACCTGDOCITEM",
     "tableName": "BSEG",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CompanyCode",
@@ -9674,6 +9688,7 @@
   {
     "cdsName": "I_ADDLLEDGEROPLACCTGDOCITEM",
     "tableName": "BSEG_ADD",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CompanyCode",
@@ -10184,6 +10199,7 @@
   {
     "cdsName": "I_BUSINESSPARTNER",
     "tableName": "BUT000",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BusinessPartner",
@@ -10506,6 +10522,7 @@
   {
     "cdsName": "I_PROFITCENTER",
     "tableName": "CEPC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -10660,6 +10677,7 @@
   {
     "cdsName": "I_PROFITCENTERTEXT",
     "tableName": "CEPCT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -10694,6 +10712,7 @@
   {
     "cdsName": "I_WORKCENTER",
     "tableName": "CRHD",
+    "released": true,
     "mapping": [
       {
         "cdsField": "WorkCenterInternalID",
@@ -11040,6 +11059,7 @@
   {
     "cdsName": "I_WORKCENTERTEXT",
     "tableName": "CRTX",
+    "released": true,
     "mapping": [
       {
         "cdsField": "WorkCenterTypeCode",
@@ -11070,6 +11090,7 @@
   {
     "cdsName": "I_GLACCOUNT",
     "tableName": "CSKA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "GLAccount",
@@ -11192,6 +11213,7 @@
   {
     "cdsName": "I_GLACCOUNTINCOMPANYCODE",
     "tableName": "CSKB",
+    "released": true,
     "mapping": [
       {
         "cdsField": "GLAccount",
@@ -11362,6 +11384,7 @@
   {
     "cdsName": "I_COSTCENTER",
     "tableName": "CSKS",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -11692,6 +11715,7 @@
   {
     "cdsName": "I_COSTCENTERTEXT",
     "tableName": "CSKT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CostCenter",
@@ -11726,6 +11750,7 @@
   {
     "cdsName": "I_GLACCOUNTTEXT",
     "tableName": "CSKU",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ChartOfAccounts",
@@ -11756,6 +11781,7 @@
   {
     "cdsName": "I_COSTCENTERACTIVITYTYPE",
     "tableName": "CSLA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -11854,6 +11880,7 @@
   {
     "cdsName": "I_COSTCENTERACTIVITYTYPETEXT",
     "tableName": "CSLT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ValidityEndDate",
@@ -11892,6 +11919,7 @@
   {
     "cdsName": "DDCDS_CUSTOMER_DOMAIN_VALUE",
     "tableName": "DD07L",
+    "released": true,
     "mapping": [
       {
         "cdsField": "domain_name",
@@ -11914,6 +11942,7 @@
   {
     "cdsName": "DDCDS_CUSTOMER_DOMAIN_VALUE_T",
     "tableName": "DD07T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "domain_name",
@@ -11940,6 +11969,7 @@
   {
     "cdsName": "I_CADOCUMENTHEADER",
     "tableName": "DFKKKO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CADocumentNumber",
@@ -12098,6 +12128,7 @@
   {
     "cdsName": "I_CADOCUMENTBPITEMPHYSICAL",
     "tableName": "DFKKOP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CADocumentNumber",
@@ -12680,6 +12711,7 @@
   {
     "cdsName": "I_CADOCUMENTGLITEM",
     "tableName": "DFKKOPK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CADocumentNumber",
@@ -13022,6 +13054,7 @@
   {
     "cdsName": "I_PURCHASEREQUISITIONITEMAPI01",
     "tableName": "EBAN",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseRequisition",
@@ -13420,6 +13453,7 @@
   {
     "cdsName": "I_PURREQNACCTASSGMTAPI01",
     "tableName": "EBKN",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseRequisition",
@@ -13686,6 +13720,7 @@
   {
     "cdsName": "I_WASTETRANSFERREQUESTHISTORY",
     "tableName": "EHEWAD_WA_TRRQLA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "WasteTransfRequestHistoryUUID",
@@ -13764,6 +13799,7 @@
   {
     "cdsName": "I_PURCHASINGINFORECORDAPI01",
     "tableName": "EINA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchasingInfoRecord",
@@ -13902,6 +13938,7 @@
   {
     "cdsName": "I_PURCHASINGINFORECORDAPI01",
     "tableName": "EINE",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchasingInfoRecord",
@@ -14040,6 +14077,7 @@
   {
     "cdsName": "I_PURCHASEORDERHISTORYAPI01",
     "tableName": "EKBE",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseOrder",
@@ -14270,6 +14308,7 @@
   {
     "cdsName": "I_POSUPPLIERCONFIRMATIONAPI01",
     "tableName": "EKES",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseOrder",
@@ -14396,6 +14435,7 @@
   {
     "cdsName": "I_PURORDSCHEDULELINEAPI01",
     "tableName": "EKET",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseOrder",
@@ -14530,6 +14570,7 @@
   {
     "cdsName": "I_PURORDACCOUNTASSIGNMENTAPI01",
     "tableName": "EKKN",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseOrder",
@@ -14760,6 +14801,7 @@
   {
     "cdsName": "I_PURCHASEORDERAPI01",
     "tableName": "EKKO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseOrder",
@@ -14994,6 +15036,7 @@
   {
     "cdsName": "I_PURCHASEORDERPARTNERAPI01",
     "tableName": "EKPA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseOrder",
@@ -15052,6 +15095,7 @@
   {
     "cdsName": "I_PURCHASEORDERITEMAPI01",
     "tableName": "EKPO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchaseOrder",
@@ -15598,6 +15642,7 @@
   {
     "cdsName": "I_MPPURCHASINGSOURCEITEM",
     "tableName": "EORD",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Material",
@@ -15712,6 +15757,7 @@
   {
     "cdsName": "I_PURGQUOTAARRGMTAPI01",
     "tableName": "EQUK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "QuotaArrangement",
@@ -15758,6 +15804,7 @@
   {
     "cdsName": "I_PURGQUOTAARRGMTITEMAPI01",
     "tableName": "EQUP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "QuotaArrangement",
@@ -15864,6 +15911,7 @@
   {
     "cdsName": "I_CONTRACTACCOUNTHEADER",
     "tableName": "FKKVK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ContractAccount",
@@ -15910,6 +15958,7 @@
   {
     "cdsName": "I_CONTRACTACCOUNTPARTNER",
     "tableName": "FKKVKP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ContractAccount",
@@ -16260,6 +16309,7 @@
   {
     "cdsName": "I_CAPACITYREQUIREMENTITEM",
     "tableName": "KBED",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CapacityRequirement",
@@ -16274,6 +16324,7 @@
   {
     "cdsName": "I_CUSTOMER",
     "tableName": "KNA1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Customer",
@@ -16612,6 +16663,7 @@
   {
     "cdsName": "I_CUSTOMERCOMPANY",
     "tableName": "KNB1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Customer",
@@ -16850,6 +16902,7 @@
   {
     "cdsName": "I_CUSTOMERDUNNING",
     "tableName": "KNB5",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CompanyCode",
@@ -16896,6 +16949,7 @@
   {
     "cdsName": "I_BUSINESSPARTNERBANK",
     "tableName": "KNBK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BusinessPartner",
@@ -16994,6 +17048,7 @@
   {
     "cdsName": "I_CUSTSALESAREATAX",
     "tableName": "KNVI",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Customer",
@@ -17036,6 +17091,7 @@
   {
     "cdsName": "I_CONTACTPERSON",
     "tableName": "KNVK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ContactPerson",
@@ -17090,6 +17146,7 @@
   {
     "cdsName": "I_CUSTSALESPARTNERFUNC",
     "tableName": "KNVP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Customer",
@@ -17152,6 +17209,7 @@
   {
     "cdsName": "I_CUSTOMERSALESAREA",
     "tableName": "KNVV",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Customer",
@@ -17406,6 +17464,7 @@
   {
     "cdsName": "I_SLSPRCGCONDITIONRECORD",
     "tableName": "KONH",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ConditionRecord",
@@ -17612,6 +17671,7 @@
   {
     "cdsName": "I_SLSPRCGCNDNRECORDSCALE",
     "tableName": "KONM",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ConditionRecord",
@@ -17670,6 +17730,7 @@
   {
     "cdsName": "I_SLSPRCGCONDITIONRECORD",
     "tableName": "KONP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ConditionRecord",
@@ -17876,6 +17937,7 @@
   {
     "cdsName": "I_SUPPLIER",
     "tableName": "LFA1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Supplier",
@@ -18258,6 +18320,7 @@
   {
     "cdsName": "I_BUSINESSPARTNERTAXNUMBER",
     "tableName": "LFAS",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BusinessPartner",
@@ -18284,6 +18347,7 @@
   {
     "cdsName": "I_SUPPLIERCOMPANY",
     "tableName": "LFB1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Supplier",
@@ -18542,6 +18606,7 @@
   {
     "cdsName": "I_BUSINESSPARTNERBANK",
     "tableName": "LFBK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BusinessPartner",
@@ -18640,6 +18705,7 @@
   {
     "cdsName": "I_SUPPLIERPURCHASINGORG",
     "tableName": "LFM1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Supplier",
@@ -18854,6 +18920,7 @@
   {
     "cdsName": "I_DELIVERYDOCUMENT",
     "tableName": "LIKP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DeliveryDocument",
@@ -19460,6 +19527,7 @@
   {
     "cdsName": "I_DELIVERYDOCUMENTITEM",
     "tableName": "LIPS",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DeliveryDocument",
@@ -20290,6 +20358,7 @@
   {
     "cdsName": "I_PRODUCT",
     "tableName": "MARA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -20840,6 +20909,7 @@
   {
     "cdsName": "I_PRODUCTQM",
     "tableName": "MARA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -20862,6 +20932,7 @@
   {
     "cdsName": "I_PRODUCTSALES",
     "tableName": "MARA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -20956,6 +21027,7 @@
   {
     "cdsName": "I_PRODUCTSTORAGE_2",
     "tableName": "MARA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21030,6 +21102,7 @@
   {
     "cdsName": "I_PRODUCTPROCUREMENT",
     "tableName": "MARA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21072,6 +21145,7 @@
   {
     "cdsName": "I_PRODUCTPLANTBASIC",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21326,6 +21400,7 @@
   {
     "cdsName": "I_PRODUCTPLANTCOSTING",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21392,6 +21467,7 @@
   {
     "cdsName": "I_PRODUCTPLANTINTLTRD",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21434,6 +21510,7 @@
   {
     "cdsName": "I_PRODUCTPLANTPROCUREMENT",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21480,6 +21557,7 @@
   {
     "cdsName": "I_PRODUCTPLANTSALES",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21526,6 +21604,7 @@
   {
     "cdsName": "I_PRODUCTSUPPLYPLANNING",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21816,6 +21895,7 @@
   {
     "cdsName": "I_PRODUCTWORKSCHEDULING",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21906,6 +21986,7 @@
   {
     "cdsName": "I_PRODUCTPLANTQTMANAGEMENT",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21960,6 +22041,7 @@
   {
     "cdsName": "I_PRODUCTPLANTFORECAST",
     "tableName": "MARC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -21998,6 +22080,7 @@
   {
     "cdsName": "I_PRODUCTSTORAGELOCATIONBASIC",
     "tableName": "MARD",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -22088,6 +22171,7 @@
   {
     "cdsName": "I_PRODUCTUNITSOFMEASURE",
     "tableName": "MARM",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -22182,6 +22266,7 @@
   {
     "cdsName": "I_MATERIALDOCUMENTHEADER_2",
     "tableName": "MATDOC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MaterialDocumentYear",
@@ -22256,6 +22341,7 @@
   {
     "cdsName": "I_BATCH",
     "tableName": "MCH1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Plant",
@@ -22382,6 +22468,7 @@
   {
     "cdsName": "I_BATCH",
     "tableName": "MCHA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Plant",
@@ -22508,6 +22595,7 @@
   {
     "cdsName": "I_PRODUCTIONVERSION",
     "tableName": "MKAL",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Material",
@@ -22718,6 +22806,7 @@
   {
     "cdsName": "I_MATERIALDOCUMENTHEADER_2",
     "tableName": "MKPF",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MaterialDocumentYear",
@@ -22792,6 +22881,7 @@
   {
     "cdsName": "I_MATERIALDOCUMENTITEM_2",
     "tableName": "MSEG",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MaterialDocumentYear",
@@ -23098,6 +23188,7 @@
   {
     "cdsName": "I_MATERIALSTOCK",
     "tableName": "MSKA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Material",
@@ -23188,6 +23279,7 @@
   {
     "cdsName": "I_MATERIALSTOCK",
     "tableName": "MSKU",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Material",
@@ -23278,6 +23370,7 @@
   {
     "cdsName": "I_MATERIALSTOCK",
     "tableName": "MSLB",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Material",
@@ -23368,6 +23461,7 @@
   {
     "cdsName": "I_MATERIALSTOCK",
     "tableName": "MSLBH",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Material",
@@ -23458,6 +23552,7 @@
   {
     "cdsName": "I_MATERIALSTOCK",
     "tableName": "MSPR",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Material",
@@ -23548,6 +23643,7 @@
   {
     "cdsName": "I_PACKINGINSTRUCTIONHEADER",
     "tableName": "PACKKP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PackingInstructionSystemUUID",
@@ -23702,6 +23798,7 @@
   {
     "cdsName": "I_PACKINGINSTRUCTIONCOMPONENT",
     "tableName": "PACKPO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PackingInstructionItemSystUUID",
@@ -23764,6 +23861,7 @@
   {
     "cdsName": "I_KANBANCONTROLCYCLE",
     "tableName": "PKHD",
+    "released": true,
     "mapping": [
       {
         "cdsField": "KanbanControlCycle",
@@ -24090,6 +24188,7 @@
   {
     "cdsName": "I_MFGBOOOPPRODNRSCETOOLCHGST",
     "tableName": "PLFH",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillOfOperationsType",
@@ -24232,6 +24331,7 @@
   {
     "cdsName": "I_BILLOFOPERATIONSGROUP",
     "tableName": "PLKO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillOfOperationsType",
@@ -24246,6 +24346,7 @@
   {
     "cdsName": "I_MFGBILLOFOPERATIONSOPERATION",
     "tableName": "PLPO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillOfOperationsType",
@@ -24272,6 +24373,7 @@
   {
     "cdsName": "I_SLSPRCGCONDITIONRECORD",
     "tableName": "PRCD_ELEMENTS",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ConditionRecord",
@@ -24478,6 +24580,7 @@
   {
     "cdsName": "I_INSPECTIONLOT",
     "tableName": "QALS",
+    "released": true,
     "mapping": [
       {
         "cdsField": "InspectionLot",
@@ -25204,6 +25307,7 @@
   {
     "cdsName": "I_CHARCATTRIBUTECODETEXT",
     "tableName": "QPCT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CharacteristicAttributeCodeGrp",
@@ -25226,6 +25330,7 @@
   {
     "cdsName": "I_DEFECTCODETEXT",
     "tableName": "QPCT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DefectCodeGroup",
@@ -25248,6 +25353,7 @@
   {
     "cdsName": "I_USAGEDECISIONCODETEXT",
     "tableName": "QPCT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "UsageDecisionCodeGroup",
@@ -25270,6 +25376,7 @@
   {
     "cdsName": "I_INSPSPECIFICATIONVERSION",
     "tableName": "QPMK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "InspectionSpecificationPlant",
@@ -25608,6 +25715,7 @@
   {
     "cdsName": "I_SUPLRINVOICEITEMGLACCTAPI01",
     "tableName": "RBCO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SupplierInvoice",
@@ -25786,6 +25894,7 @@
   {
     "cdsName": "I_SUPPLIERINVOICEAPI01",
     "tableName": "RBKP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SupplierInvoice",
@@ -26072,6 +26181,7 @@
   {
     "cdsName": "I_SUPLRINVCSELDPURGDOCAPI01",
     "tableName": "RBSELBEST",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SupplierInvoice",
@@ -26094,6 +26204,7 @@
   {
     "cdsName": "I_RESERVATIONDOCUMENTITEM",
     "tableName": "RESB",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Reservation",
@@ -26284,6 +26395,7 @@
   {
     "cdsName": "I_SUPCSGNMTPPLINEWTHDRWLAPI01",
     "tableName": "RKWA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MaterialDocument",
@@ -26378,6 +26490,7 @@
   {
     "cdsName": "I_SUPLRINVCITEMPURORDREFAPI01",
     "tableName": "RSEG",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SupplierInvoice",
@@ -26524,6 +26637,7 @@
   {
     "cdsName": "I_COSTCENTERHIERARCHY",
     "tableName": "SETHEADER",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26562,6 +26676,7 @@
   {
     "cdsName": "I_COSTCTRACTIVITYTYPEHIERARCHY",
     "tableName": "SETHEADER",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26600,6 +26715,7 @@
   {
     "cdsName": "I_FUNCTIONALAREAHIERARCHY",
     "tableName": "SETHEADER",
+    "released": true,
     "mapping": [
       {
         "cdsField": "FunctionalAreaHierarchy",
@@ -26634,6 +26750,7 @@
   {
     "cdsName": "I_PROFITCENTERHIERARCHY",
     "tableName": "SETHEADER",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26672,6 +26789,7 @@
   {
     "cdsName": "I_STSTCLKEYFIGUREHIERARCHY",
     "tableName": "SETHEADER",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26706,6 +26824,7 @@
   {
     "cdsName": "I_COSTCENTERHIERARCHY",
     "tableName": "SETHEADERT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26744,6 +26863,7 @@
   {
     "cdsName": "I_COSTCTRACTIVITYTYPEHIERARCHY",
     "tableName": "SETHEADERT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26782,6 +26902,7 @@
   {
     "cdsName": "I_FUNCTIONALAREAHIERARCHY",
     "tableName": "SETHEADERT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "FunctionalAreaHierarchy",
@@ -26816,6 +26937,7 @@
   {
     "cdsName": "I_PROFITCENTERHIERARCHY",
     "tableName": "SETHEADERT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26854,6 +26976,7 @@
   {
     "cdsName": "I_STSTCLKEYFIGUREHIERARCHY",
     "tableName": "SETHEADERT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26888,6 +27011,7 @@
   {
     "cdsName": "I_COSTCENTERHIERARCHYNODE",
     "tableName": "SETLEAF",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -26946,6 +27070,7 @@
   {
     "cdsName": "I_COSTCTRACTIVITYTYPEHIERNODE",
     "tableName": "SETLEAF",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -27004,6 +27129,7 @@
   {
     "cdsName": "I_FUNCTIONALAREAHIERNODE",
     "tableName": "SETLEAF",
+    "released": true,
     "mapping": [
       {
         "cdsField": "FunctionalAreaHierarchy",
@@ -27058,6 +27184,7 @@
   {
     "cdsName": "I_PROFITCENTERHIERARCHYNODE",
     "tableName": "SETLEAF",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -27116,6 +27243,7 @@
   {
     "cdsName": "I_STSTCLKEYFIGUREHIERNODE",
     "tableName": "SETLEAF",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -27174,6 +27302,7 @@
   {
     "cdsName": "I_COSTCENTERHIERARCHYNODE",
     "tableName": "SETNODE",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -27232,6 +27361,7 @@
   {
     "cdsName": "I_COSTCTRACTIVITYTYPEHIERNODE",
     "tableName": "SETNODE",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -27290,6 +27420,7 @@
   {
     "cdsName": "I_FUNCTIONALAREAHIERNODE",
     "tableName": "SETNODE",
+    "released": true,
     "mapping": [
       {
         "cdsField": "FunctionalAreaHierarchy",
@@ -27344,6 +27475,7 @@
   {
     "cdsName": "I_PROFITCENTERHIERARCHYNODE",
     "tableName": "SETNODE",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -27402,6 +27534,7 @@
   {
     "cdsName": "I_STSTCLKEYFIGUREHIERNODE",
     "tableName": "SETNODE",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -27460,6 +27593,7 @@
   {
     "cdsName": "I_GLACCOUNTINCHARTOFACCOUNTS",
     "tableName": "SKA1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ChartOfAccounts",
@@ -27554,6 +27688,7 @@
   {
     "cdsName": "I_GLACCOUNTTEXT",
     "tableName": "SKAT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ChartOfAccounts",
@@ -27584,6 +27719,7 @@
   {
     "cdsName": "I_GLACCOUNTINCOMPANYCODE",
     "tableName": "SKB1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "GLAccount",
@@ -27754,6 +27890,7 @@
   {
     "cdsName": "I_COMPANYCODE",
     "tableName": "T001",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CompanyCode",
@@ -27848,6 +27985,7 @@
   {
     "cdsName": "I_LANGUAGE",
     "tableName": "T002",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -27862,6 +28000,7 @@
   {
     "cdsName": "I_LANGUAGETEXT",
     "tableName": "T002T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -27880,6 +28019,7 @@
   {
     "cdsName": "I_ACCOUNTINGDOCUMENTTYPE",
     "tableName": "T003",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AccountingDocumentType",
@@ -27910,6 +28050,7 @@
   {
     "cdsName": "I_CHARTOFACCOUNTS",
     "tableName": "T004",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ChartOfAccounts",
@@ -27932,6 +28073,7 @@
   {
     "cdsName": "I_COUNTRY",
     "tableName": "T005",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Country",
@@ -27958,6 +28100,7 @@
   {
     "cdsName": "I_COUNTRYTEXT",
     "tableName": "T005T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Country",
@@ -27988,6 +28131,7 @@
   {
     "cdsName": "I_UNITOFMEASURE",
     "tableName": "T006",
+    "released": true,
     "mapping": [
       {
         "cdsField": "UnitOfMeasure",
@@ -28066,6 +28210,7 @@
   {
     "cdsName": "I_UNITOFMEASURETEXT",
     "tableName": "T006A",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -28100,6 +28245,7 @@
   {
     "cdsName": "I_UNITOFMEASURECOMMERCIALNAME",
     "tableName": "T006B",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -28118,6 +28264,7 @@
   {
     "cdsName": "I_UNITOFMEASURETECHNICALNAME",
     "tableName": "T006C",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -28136,6 +28283,7 @@
   {
     "cdsName": "I_UNITOFMEASUREDIMENSION",
     "tableName": "T006D",
+    "released": true,
     "mapping": [
       {
         "cdsField": "UnitOfMeasureDimension",
@@ -28186,6 +28334,7 @@
   {
     "cdsName": "I_UNITOFMEASUREISOCODE",
     "tableName": "T006I",
+    "released": true,
     "mapping": [
       {
         "cdsField": "UnitOfMeasureISOCode",
@@ -28196,6 +28345,7 @@
   {
     "cdsName": "I_UNITOFMEASUREISOCODETEXT",
     "tableName": "T006J",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -28214,6 +28364,7 @@
   {
     "cdsName": "I_UNITOFMEASUREDIMENSIONTEXT",
     "tableName": "T006T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -28232,6 +28383,7 @@
   {
     "cdsName": "I_PAYMENTBLOCKINGREASON",
     "tableName": "T008",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PaymentBlockingReason",
@@ -28242,6 +28394,7 @@
   {
     "cdsName": "I_PAYMENTBLOCKINGREASON",
     "tableName": "T008T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PaymentBlockingReason",
@@ -28252,6 +28405,7 @@
   {
     "cdsName": "I_FINANCIALSTATEMENTHIER",
     "tableName": "T011",
+    "released": true,
     "mapping": [
       {
         "cdsField": "FinancialStatementHierarchy",
@@ -28326,6 +28480,7 @@
   {
     "cdsName": "I_FINANCIALSTATEMENTHIER",
     "tableName": "T011",
+    "released": true,
     "mapping": [
       {
         "cdsField": "FinancialStatementHierarchy",
@@ -28400,6 +28555,7 @@
   {
     "cdsName": "I_FINANCIALSTATEMENTHIERT",
     "tableName": "T011T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "FinancialStatementHierarchy",
@@ -28426,6 +28582,7 @@
   {
     "cdsName": "I_CREDITCONTROLAREA",
     "tableName": "T014",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CreditControlArea",
@@ -28440,6 +28597,7 @@
   {
     "cdsName": "I_CREDITCONTROLAREATEXT",
     "tableName": "T014T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CreditControlArea",
@@ -28458,6 +28616,7 @@
   {
     "cdsName": "I_PURCHASINGGROUP",
     "tableName": "T024",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchasingGroup",
@@ -28492,6 +28651,7 @@
   {
     "cdsName": "I_MRPCONTROLLER",
     "tableName": "T024D",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Plant",
@@ -28530,6 +28690,7 @@
   {
     "cdsName": "I_PURCHASINGORGANIZATION",
     "tableName": "T024E",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchasingOrganization",
@@ -28548,6 +28709,7 @@
   {
     "cdsName": "I_SHIPPINGINSTRUCTION",
     "tableName": "T027A",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ShippingInstruction",
@@ -28558,6 +28720,7 @@
   {
     "cdsName": "I_SHIPPINGINSTRUCTIONTEXT",
     "tableName": "T027B",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ShippingInstruction",
@@ -28576,6 +28739,7 @@
   {
     "cdsName": "I_DUNNINGBLOCKINGREASONCODE",
     "tableName": "T040S",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DunningBlockingReason",
@@ -28586,6 +28750,7 @@
   {
     "cdsName": "I_CORRESPONDENCETYPE",
     "tableName": "T048",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Correspondence",
@@ -28616,6 +28781,7 @@
   {
     "cdsName": "I_SPECIALGLCODETEXT",
     "tableName": "T074T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "FinancialAccountType",
@@ -28642,6 +28808,7 @@
   {
     "cdsName": "I_SPECIALGLCODE",
     "tableName": "T074U",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SpecialGLCode",
@@ -28668,6 +28835,7 @@
   {
     "cdsName": "I_CUSTOMERACCOUNTGROUPTEXT",
     "tableName": "T077X",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -28686,6 +28854,7 @@
   {
     "cdsName": "I_CUSTOMERGROUP",
     "tableName": "T151",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CustomerGroup",
@@ -28696,6 +28865,7 @@
   {
     "cdsName": "I_CUSTOMERGROUP",
     "tableName": "T151T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CustomerGroup",
@@ -28706,6 +28876,7 @@
   {
     "cdsName": "I_GOODSMOVEMENTTYPE",
     "tableName": "T156",
+    "released": true,
     "mapping": [
       {
         "cdsField": "GoodsMovementType",
@@ -28736,6 +28907,7 @@
   {
     "cdsName": "I_PURCHASINGDOCUMENTTYPE",
     "tableName": "T161",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchasingDocumentCategory",
@@ -28766,6 +28938,7 @@
   {
     "cdsName": "I_PURCHASINGDOCUMENTTYPETEXT",
     "tableName": "T161T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurchasingDocumentType",
@@ -28788,6 +28961,7 @@
   {
     "cdsName": "I_SUPLRCONFCATINTERNALASSGMT",
     "tableName": "T163D",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SupplierConfInternalCategory",
@@ -28806,6 +28980,7 @@
   {
     "cdsName": "I_ACCTASSIGNMENTCATEGORYTEXT",
     "tableName": "T163I",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AccountAssignmentCategory",
@@ -28824,6 +28999,7 @@
   {
     "cdsName": "I_ACCOUNTASSIGNMENTCATEGORY",
     "tableName": "T163K",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AccountAssignmentCategory",
@@ -28842,6 +29018,7 @@
   {
     "cdsName": "I_PURGDOCOUTPUTRELEVANTCHANGE",
     "tableName": "T166C",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DatabaseTable",
@@ -28864,6 +29041,7 @@
   {
     "cdsName": "I_PURGOBJTEXTOBJECTOUTPRLVNCE",
     "tableName": "T166K",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurgOutputOperationCode",
@@ -28902,6 +29080,7 @@
   {
     "cdsName": "I_PURGOBJITEMTXTOBJOUTPRLVNCE",
     "tableName": "T166P",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PurgOutputOperationCode",
@@ -28948,6 +29127,7 @@
   {
     "cdsName": "I_PURGDOCOUTPUTCHANGETEXT",
     "tableName": "T166T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -28966,6 +29146,7 @@
   {
     "cdsName": "I_SALESDISTRICT",
     "tableName": "T171T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDistrict",
@@ -28976,6 +29157,7 @@
   {
     "cdsName": "I_MATERIALPRICINGGROUP",
     "tableName": "T178",
+    "released": true,
     "mapping": [
       {
         "cdsField": "MaterialPricingGroup",
@@ -28986,6 +29168,7 @@
   {
     "cdsName": "I_CUSTOMERPRICEGROUP",
     "tableName": "T188",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CustomerPriceGroup",
@@ -28996,6 +29179,7 @@
   {
     "cdsName": "I_PRICELISTTYPE",
     "tableName": "T189",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PriceListType",
@@ -29006,6 +29190,7 @@
   {
     "cdsName": "I_PLNDINDEPRQMTTYPE",
     "tableName": "T459A",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PlndIndepRqmtType",
@@ -29016,6 +29201,7 @@
   {
     "cdsName": "I_SLSPRICINGPROCEDURE",
     "tableName": "T683",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PricingProcedure",
@@ -29038,6 +29224,7 @@
   {
     "cdsName": "I_SLSPRICINGPROCEDUREITEM",
     "tableName": "T683S",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PricingProcedure",
@@ -29108,6 +29295,7 @@
   {
     "cdsName": "I_SLSPRICINGPROCEDUREITEM",
     "tableName": "T683T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PricingProcedure",
@@ -29178,6 +29366,7 @@
   {
     "cdsName": "I_CONDITIONTYPE",
     "tableName": "T685",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ConditionUsage",
@@ -29196,6 +29385,7 @@
   {
     "cdsName": "I_PRICINGCONDITIONTYPE",
     "tableName": "T685A",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ConditionApplication",
@@ -29366,6 +29556,7 @@
   {
     "cdsName": "I_CONDITIONTYPE",
     "tableName": "T685T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ConditionUsage",
@@ -29384,6 +29575,7 @@
   {
     "cdsName": "I_CUSTABAPOBJDIRECTORYENTRY",
     "tableName": "TADIR",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ABAPObjectCategory",
@@ -29418,6 +29610,7 @@
   {
     "cdsName": "I_POSTINGKEY",
     "tableName": "TBSL",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PostingKey",
@@ -29452,6 +29645,7 @@
   {
     "cdsName": "I_CURRENCY",
     "tableName": "TCURC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Currency",
@@ -29478,6 +29672,7 @@
   {
     "cdsName": "I_EXCHANGERATEFACTORSRAWDATA",
     "tableName": "TCURF",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ExchangeRateType",
@@ -29516,6 +29711,7 @@
   {
     "cdsName": "I_EXCHRATEQTANTYPERAWDATA",
     "tableName": "TCURN",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SourceCurrency",
@@ -29538,6 +29734,7 @@
   {
     "cdsName": "I_EXCHANGERATERAWDATA",
     "tableName": "TCURR",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ExchangeRateType",
@@ -29572,6 +29769,7 @@
   {
     "cdsName": "I_CURRENCYTEXT",
     "tableName": "TCURT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -29594,6 +29792,7 @@
   {
     "cdsName": "I_EXCHANGERATETYPE",
     "tableName": "TCURV",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ExchangeRateType",
@@ -29632,6 +29831,7 @@
   {
     "cdsName": "I_CURRENCY",
     "tableName": "TCURX",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Currency",
@@ -29658,6 +29858,7 @@
   {
     "cdsName": "I_CUSTABAPPACKAGE",
     "tableName": "TDEVC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ABAPPackage",
@@ -29696,6 +29897,7 @@
   {
     "cdsName": "I_INCOTERMSCLASSIFICATION",
     "tableName": "TINC",
+    "released": true,
     "mapping": [
       {
         "cdsField": "IncotermsClassification",
@@ -29710,6 +29912,7 @@
   {
     "cdsName": "I_INCOTERMSCLASSIFICATION",
     "tableName": "TINCT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "IncotermsClassification",
@@ -29724,6 +29927,7 @@
   {
     "cdsName": "I_CONTROLLINGAREA",
     "tableName": "TKA01",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ControllingArea",
@@ -29798,6 +30002,7 @@
   {
     "cdsName": "I_COMPANYCODE",
     "tableName": "TKA02",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CompanyCode",
@@ -29892,6 +30097,7 @@
   {
     "cdsName": "I_INCOTERMSCLASSIFICATION",
     "tableName": "TPAR",
+    "released": true,
     "mapping": [
       {
         "cdsField": "IncotermsClassification",
@@ -29906,6 +30112,7 @@
   {
     "cdsName": "I_PARTNERFUNCTION",
     "tableName": "TPAR",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PartnerFunction",
@@ -29920,6 +30127,7 @@
   {
     "cdsName": "I_PARTNERFUNCTIONTEXT",
     "tableName": "TPART",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PartnerFunction",
@@ -29938,6 +30146,7 @@
   {
     "cdsName": "I_DELIVERYPRIORITY",
     "tableName": "TPRIO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DeliveryPriority",
@@ -29952,6 +30161,7 @@
   {
     "cdsName": "I_CUSTOMERTAXCLASSIFICATION",
     "tableName": "TSKD",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CustomerTaxCategory",
@@ -29966,6 +30176,7 @@
   {
     "cdsName": "I_CUSTOMERTAXCLASSIFICATION",
     "tableName": "TSKDT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CustomerTaxCategory",
@@ -29980,6 +30191,7 @@
   {
     "cdsName": "I_DIVISION",
     "tableName": "TSPA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Division",
@@ -29994,6 +30206,7 @@
   {
     "cdsName": "I_DIVISION",
     "tableName": "TSPAT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Division",
@@ -30008,6 +30221,7 @@
   {
     "cdsName": "I_PRODUCTSALESTAX",
     "tableName": "TSTL",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Product",
@@ -30030,6 +30244,7 @@
   {
     "cdsName": "I_REFERENCEDOCUMENTTYPETEXT",
     "tableName": "TTYPT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ReferenceDocumentType",
@@ -30048,6 +30263,7 @@
   {
     "cdsName": "I_SALESDOCUMENTRJCNREASON",
     "tableName": "TVAG",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocumentRjcnReason",
@@ -30058,6 +30274,7 @@
   {
     "cdsName": "I_SALESDOCUMENTRJCNREASON",
     "tableName": "TVAGT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocumentRjcnReason",
@@ -30068,6 +30285,7 @@
   {
     "cdsName": "I_SALESDOCUMENTTYPE",
     "tableName": "TVAK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocumentType",
@@ -30134,6 +30352,7 @@
   {
     "cdsName": "I_SALESDOCUMENTTYPE",
     "tableName": "TVAKT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocumentType",
@@ -30200,6 +30419,7 @@
   {
     "cdsName": "I_SALESDOCUMENTITEMCATEGORY",
     "tableName": "TVAP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocumentItemCategory",
@@ -30230,6 +30450,7 @@
   {
     "cdsName": "I_SALESDOCUMENTITEMCATEGORY",
     "tableName": "TVAPT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocumentItemCategory",
@@ -30260,6 +30481,7 @@
   {
     "cdsName": "I_SDDOCUMENTREASON",
     "tableName": "TVAU",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SDDocumentReason",
@@ -30278,6 +30500,7 @@
   {
     "cdsName": "I_SDDOCUMENTREASONTEXT",
     "tableName": "TVAUT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SDDocumentReason",
@@ -30296,6 +30519,7 @@
   {
     "cdsName": "I_SALESOFFICE",
     "tableName": "TVBUR",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesOffice",
@@ -30306,6 +30530,7 @@
   {
     "cdsName": "I_SALESOFFICESALESGROUP",
     "tableName": "TVBVK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesOffice",
@@ -30320,6 +30545,7 @@
   {
     "cdsName": "I_SDDOCUMENTPAYMENTCARDTYPE",
     "tableName": "TVCIN",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PaymentCardType",
@@ -30334,6 +30560,7 @@
   {
     "cdsName": "I_SDDOCUMENTPAYMENTCARDTYPE",
     "tableName": "TVCINT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "PaymentCardType",
@@ -30348,6 +30575,7 @@
   {
     "cdsName": "I_SCHEDULELINECATEGORY",
     "tableName": "TVEPT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ScheduleLineCategory",
@@ -30358,6 +30586,7 @@
   {
     "cdsName": "I_BILLINGDOCUMENTTYPE",
     "tableName": "TVFK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillingDocumentType",
@@ -30380,6 +30609,7 @@
   {
     "cdsName": "I_BILLINGDOCUMENTTYPE",
     "tableName": "TVFKT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillingDocumentType",
@@ -30402,6 +30632,7 @@
   {
     "cdsName": "I_BILLINGBLOCKREASON",
     "tableName": "TVFS",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillingBlockReason",
@@ -30412,6 +30643,7 @@
   {
     "cdsName": "I_BILLINGBLOCKREASON",
     "tableName": "TVFST",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillingBlockReason",
@@ -30422,6 +30654,7 @@
   {
     "cdsName": "I_SALESGROUP",
     "tableName": "TVGRT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesGroup",
@@ -30432,6 +30665,7 @@
   {
     "cdsName": "I_SALESOFFICE",
     "tableName": "TVKBT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesOffice",
@@ -30442,6 +30676,7 @@
   {
     "cdsName": "I_SALESAREASALESOFFICE",
     "tableName": "TVKBZ",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesOrganization",
@@ -30464,6 +30699,7 @@
   {
     "cdsName": "I_CUSTOMERCONDITIONGROUPVH",
     "tableName": "TVKGG",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CustomerConditionGroup",
@@ -30474,6 +30710,7 @@
   {
     "cdsName": "I_CUSTCNDNGROUPVALUEHELPTEXT",
     "tableName": "TVKGGT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Language",
@@ -30492,6 +30729,7 @@
   {
     "cdsName": "I_SALESGROUP",
     "tableName": "TVKGR",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesGroup",
@@ -30502,6 +30740,7 @@
   {
     "cdsName": "I_SALESORGANIZATION",
     "tableName": "TVKO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesOrganization",
@@ -30532,6 +30771,7 @@
   {
     "cdsName": "I_SALESORGANIZATION",
     "tableName": "TVKOT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesOrganization",
@@ -30562,6 +30802,7 @@
   {
     "cdsName": "I_SLSORGANIZATIONDISTRCHNL",
     "tableName": "TVKOV",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesOrganization",
@@ -30584,6 +30825,7 @@
   {
     "cdsName": "I_CUSTOMERACCOUNTASSGMTGROUP",
     "tableName": "TVKT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CustomerAccountAssignmentGroup",
@@ -30594,6 +30836,7 @@
   {
     "cdsName": "I_CUSTSALESAREATAX",
     "tableName": "TVKWZ",
+    "released": true,
     "mapping": [
       {
         "cdsField": "Customer",
@@ -30636,6 +30879,7 @@
   {
     "cdsName": "I_DELIVERYDOCUMENTTYPE",
     "tableName": "TVLK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DeliveryDocumentType",
@@ -30658,6 +30902,7 @@
   {
     "cdsName": "I_DELIVERYDOCUMENTTYPETEXT",
     "tableName": "TVLKT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DeliveryDocumentType",
@@ -30676,6 +30921,7 @@
   {
     "cdsName": "I_DELIVERYBLOCKREASON",
     "tableName": "TVLS",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DeliveryBlockReason",
@@ -30690,6 +30936,7 @@
   {
     "cdsName": "I_DELIVERYBLOCKREASONTEXT",
     "tableName": "TVLST",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DeliveryBlockReason",
@@ -30708,6 +30955,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP1",
     "tableName": "TVM1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup1",
@@ -30718,6 +30966,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP1",
     "tableName": "TVM1T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup1",
@@ -30728,6 +30977,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP2",
     "tableName": "TVM2",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup2",
@@ -30738,6 +30988,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP2",
     "tableName": "TVM2T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup2",
@@ -30748,6 +30999,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP3",
     "tableName": "TVM3",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup3",
@@ -30758,6 +31010,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP3",
     "tableName": "TVM3T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup3",
@@ -30768,6 +31021,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP4",
     "tableName": "TVM4",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup4",
@@ -30778,6 +31032,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP4",
     "tableName": "TVM4T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup4",
@@ -30788,6 +31043,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP5",
     "tableName": "TVM5",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup5",
@@ -30798,6 +31054,7 @@
   {
     "cdsName": "I_ADDITIONALMATERIALGROUP5",
     "tableName": "TVM5T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalMaterialGroup5",
@@ -30808,6 +31065,7 @@
   {
     "cdsName": "I_SALESDOCUMENTITEMCATEGORY",
     "tableName": "TVPT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocumentItemCategory",
@@ -30838,6 +31096,7 @@
   {
     "cdsName": "I_SHIPPINGCONDITION",
     "tableName": "TVSB",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ShippingCondition",
@@ -30848,6 +31107,7 @@
   {
     "cdsName": "I_SHIPPINGCONDITIONTEXT",
     "tableName": "TVSBT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ShippingCondition",
@@ -30866,6 +31126,7 @@
   {
     "cdsName": "I_SHIPPINGPOINT",
     "tableName": "TVST",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ShippingPoint",
@@ -30888,6 +31149,7 @@
   {
     "cdsName": "I_SHIPPINGPOINT",
     "tableName": "TVSTT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "ShippingPoint",
@@ -30910,6 +31172,7 @@
   {
     "cdsName": "I_SALESAREA",
     "tableName": "TVTA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesOrganization",
@@ -30956,6 +31219,7 @@
   {
     "cdsName": "I_DISTRIBUTIONCHANNEL",
     "tableName": "TVTW",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DistributionChannel",
@@ -30970,6 +31234,7 @@
   {
     "cdsName": "I_DISTRIBUTIONCHANNEL",
     "tableName": "TVTWT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DistributionChannel",
@@ -30984,6 +31249,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP1",
     "tableName": "TVV1",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup1",
@@ -30994,6 +31260,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP1",
     "tableName": "TVV1T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup1",
@@ -31004,6 +31271,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP2",
     "tableName": "TVV2",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup2",
@@ -31014,6 +31282,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP2",
     "tableName": "TVV2T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup2",
@@ -31024,6 +31293,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP3",
     "tableName": "TVV3",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup3",
@@ -31034,6 +31304,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP3",
     "tableName": "TVV3T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup3",
@@ -31044,6 +31315,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP4",
     "tableName": "TVV4",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup4",
@@ -31054,6 +31326,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP4",
     "tableName": "TVV4T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup4",
@@ -31064,6 +31337,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP5",
     "tableName": "TVV5",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup5",
@@ -31074,6 +31348,7 @@
   {
     "cdsName": "I_ADDITIONALCUSTOMERGROUP5",
     "tableName": "TVV5T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "AdditionalCustomerGroup5",
@@ -31084,6 +31359,7 @@
   {
     "cdsName": "I_CUSTOMERPAYMENTTERMS",
     "tableName": "TVZBT",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CustomerPaymentTerms",
@@ -31094,6 +31370,7 @@
   {
     "cdsName": "I_CREDITMANAGEMENTACCOUNT",
     "tableName": "UKMBP_CMS_SGM",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BusinessPartner",
@@ -31168,6 +31445,7 @@
   {
     "cdsName": "I_CREDITMANAGEMENTSEGMENT",
     "tableName": "UKMCRED_SGM0T",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CreditSegment",
@@ -31194,6 +31472,7 @@
   {
     "cdsName": "I_SALESDOCUMENT",
     "tableName": "VBAK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocument",
@@ -31896,6 +32175,7 @@
   {
     "cdsName": "I_SALESDOCUMENTITEM",
     "tableName": "VBAP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocument",
@@ -32978,6 +33258,7 @@
   {
     "cdsName": "I_SALESDOCUMENTSCHEDULELINE",
     "tableName": "VBEP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocument",
@@ -33224,6 +33505,7 @@
   {
     "cdsName": "I_SDDOCUMENTMULTILEVELPROCFLOW",
     "tableName": "VBFA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "DocRelationshipUUID",
@@ -33326,6 +33608,7 @@
   {
     "cdsName": "I_COLLECTIVEPROCESSINGERRORLOG",
     "tableName": "VBFS",
+    "released": true,
     "mapping": [
       {
         "cdsField": "CollectiveProcessing",
@@ -33384,6 +33667,7 @@
   {
     "cdsName": "I_SALESDOCUMENT",
     "tableName": "VBKD",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocument",
@@ -34086,6 +34370,7 @@
   {
     "cdsName": "I_BILLINGDOCUMENTBASIC",
     "tableName": "VBRK",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillingDocument",
@@ -34520,6 +34805,7 @@
   {
     "cdsName": "I_BILLINGDOCUMENTITEMBASIC",
     "tableName": "VBRP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "BillingDocument",
@@ -35182,6 +35468,7 @@
   {
     "cdsName": "I_SALESDOCUMENT",
     "tableName": "VEDA",
+    "released": true,
     "mapping": [
       {
         "cdsField": "SalesDocument",
@@ -35884,6 +36171,7 @@
   {
     "cdsName": "I_HANDLINGUNITTP",
     "tableName": "VEKP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "HandlingUnitExternalID",
@@ -36086,6 +36374,7 @@
   {
     "cdsName": "I_HANDLINGUNITHEADER",
     "tableName": "VEKP",
+    "released": true,
     "mapping": [
       {
         "cdsField": "HandlingUnitInternalID",
@@ -36352,6 +36641,7 @@
   {
     "cdsName": "I_HANDLINGUNITITEMTP",
     "tableName": "VEPO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "HandlingUnitExternalID",
@@ -36446,6 +36736,7 @@
   {
     "cdsName": "I_HANDLINGUNITITEM",
     "tableName": "VEPO",
+    "released": true,
     "mapping": [
       {
         "cdsField": "HandlingUnitInternalID",
@@ -36566,6 +36857,217 @@
       {
         "cdsField": "HandlingUnitItemUUID",
         "tableField": "HANDLE_VEPO"
+      }
+    ]
+  },
+  {
+    "cdsName": "I_RECONTRACT",
+    "tableName": "VICNCN",
+    "released": false,
+    "mapping": [
+      {
+        "cdsField": "InternalRealEstateNumber",
+        "tableField": "INTRENO"
+      },
+      {
+        "cdsField": "CompanyCode",
+        "tableField": "BUKRS"
+      },
+      {
+        "cdsField": "RealEstateContract",
+        "tableField": "RECNNR"
+      },
+      {
+        "cdsField": "REStatusObject",
+        "tableField": "OBJNR"
+      },
+      {
+        "cdsField": "REInternalFinNumber",
+        "tableField": "IMKEY"
+      },
+      {
+        "cdsField": "RECreationType",
+        "tableField": "CREATIONTYPE"
+      },
+      {
+        "cdsField": "CreatedByUser",
+        "tableField": "RERF"
+      },
+      {
+        "cdsField": "CreationDate",
+        "tableField": "DERF"
+      },
+      {
+        "cdsField": "CreationTime",
+        "tableField": "TERF"
+      },
+      {
+        "cdsField": "RESourceOfCreation",
+        "tableField": "REHER"
+      },
+      {
+        "cdsField": "LastChangedByUser",
+        "tableField": "RBEAR"
+      },
+      {
+        "cdsField": "LastChangeDate",
+        "tableField": "DBEAR"
+      },
+      {
+        "cdsField": "LastChangeTime",
+        "tableField": "TBEAR"
+      },
+      {
+        "cdsField": "RESourceOfChange",
+        "tableField": "RBHER"
+      },
+      {
+        "cdsField": "Responsible",
+        "tableField": "RESPONSIBLE"
+      },
+      {
+        "cdsField": "REUserExclusive",
+        "tableField": "USEREXCLUSIVE"
+      },
+      {
+        "cdsField": "REAuthorizationGroup",
+        "tableField": "AUTHGRP"
+      },
+      {
+        "cdsField": "REContractType",
+        "tableField": "RECNTYPE"
+      },
+      {
+        "cdsField": "ContractStartDate",
+        "tableField": "RECNBEG"
+      },
+      {
+        "cdsField": "ContractEndDate",
+        "tableField": "RECNENDABS"
+      },
+      {
+        "cdsField": "REContractName",
+        "tableField": "RECNTXT"
+      },
+      {
+        "cdsField": "REContractActivateDate",
+        "tableField": "RECNDACTIV"
+      },
+      {
+        "cdsField": "RETenancyLaw",
+        "tableField": "RECNTLAW"
+      },
+      {
+        "cdsField": "REContractNumberOld",
+        "tableField": "RECNTXTOLD"
+      },
+      {
+        "cdsField": "REMainContractCompanyCode",
+        "tableField": "RECNBUKRSCOLLECT"
+      },
+      {
+        "cdsField": "REMainContract",
+        "tableField": "RECNNRCOLLECT"
+      },
+      {
+        "cdsField": "REContractCurrency",
+        "tableField": "RECNCNCURR"
+      },
+      {
+        "cdsField": "REIndustrySector",
+        "tableField": "INDUSTRY"
+      },
+      {
+        "cdsField": "REIsSalesRelevant",
+        "tableField": "SRRELEVANT"
+      },
+      {
+        "cdsField": "REContractDepositType",
+        "tableField": "DPTARGETTYPE"
+      },
+      {
+        "cdsField": "REContractSignDate",
+        "tableField": "RECNDAT"
+      },
+      {
+        "cdsField": "REContract2SignDate",
+        "tableField": "RECN2DAT"
+      },
+      {
+        "cdsField": "REContractCashFlowDate",
+        "tableField": "RECNDPO"
+      },
+      {
+        "cdsField": "REContractFirstEndDate",
+        "tableField": "RECNEND1ST"
+      },
+      {
+        "cdsField": "REContractNoticeDate",
+        "tableField": "RECNNOTPER"
+      },
+      {
+        "cdsField": "REContractNoticeInDate",
+        "tableField": "RECNNOTRECEIPT"
+      },
+      {
+        "cdsField": "REContractNoticeReason",
+        "tableField": "RECNNOTREASON"
+      },
+      {
+        "cdsField": "REContractNoticeActivationDate",
+        "tableField": "RECNDAKTKU"
+      },
+      {
+        "cdsField": "RECashFlowArchivedToDate",
+        "tableField": "CFARCHIVEDTO"
+      },
+      {
+        "cdsField": "RECashFlowLockedToDate",
+        "tableField": "CFLOCKEDTO"
+      },
+      {
+        "cdsField": "RECashFlowPostingFromDate",
+        "tableField": "CFPOSTINGFROM"
+      },
+      {
+        "cdsField": "REBusinessEntity",
+        "tableField": "BENOCN"
+      },
+      {
+        "cdsField": "REObjectAvailableFromDate",
+        "tableField": "TRANSPOSSFROM"
+      },
+      {
+        "cdsField": "REObjectAvailableToDate",
+        "tableField": "TRANSPOSSTO"
+      },
+      {
+        "cdsField": "REHasMultipleAssignments",
+        "tableField": "HASMULTIASSIGN"
+      },
+      {
+        "cdsField": "REPossessionStartDate",
+        "tableField": "POSSDATEFROM"
+      },
+      {
+        "cdsField": "REPossessionEndDate",
+        "tableField": "POSSDATETO"
+      },
+      {
+        "cdsField": "ValuationRelevance",
+        "tableField": "RELEVANTEVAL"
+      },
+      {
+        "cdsField": "RealEstateObjectType",
+        "tableField": ""
+      },
+      {
+        "cdsField": "REIdentificationKey",
+        "tableField": ""
+      },
+      {
+        "cdsField": "REBusinessPartnerRole1",
+        "tableField": ""
       }
     ]
   }

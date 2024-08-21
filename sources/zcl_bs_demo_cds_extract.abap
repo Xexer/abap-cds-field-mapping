@@ -8,8 +8,9 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
     TYPES td_reason TYPE c LENGTH 15.
 
     TYPES: BEGIN OF ts_object,
-             cds   TYPE sxco_cds_object_name,
-             table TYPE string,
+             cds      TYPE sxco_cds_object_name,
+             table    TYPE string,
+             released TYPE abap_bool,
            END OF ts_object.
     TYPES tt_object TYPE STANDARD TABLE OF ts_object WITH EMPTY KEY.
 
@@ -22,6 +23,7 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
     TYPES: BEGIN OF ts_repo,
              cds_name   TYPE sxco_cds_object_name,
              table_name TYPE string,
+             released   TYPE abap_bool,
              mapping    TYPE tt_mapping,
            END OF ts_repo.
     TYPES tt_repo    TYPE STANDARD TABLE OF ts_repo WITH EMPTY KEY.
@@ -101,6 +103,7 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
     TYPES: BEGIN OF ts_object_info,
              tadirobject  TYPE string,
              tadirobjname TYPE string,
+             released     TYPE abap_bool,
              successors   TYPE tt_successor,
            END OF ts_object_info.
     TYPES tt_object_info TYPE STANDARD TABLE OF ts_object_info WITH EMPTY KEY.
@@ -119,6 +122,7 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
 
     CONSTANTS c_url_cloudification_repo TYPE string VALUE `https://raw.githubusercontent.com/SAP/abap-atc-cr-cv-s4hc/main/src/objectReleaseInfoLatest.json`.
     CONSTANTS c_url_mappings            TYPE string VALUE `https://raw.githubusercontent.com/Xexer/abap-cds-field-mapping/main/mapping/core-data-services.json`.
+    CONSTANTS c_url_not_released        TYPE string VALUE `https://raw.githubusercontent.com/Xexer/abap-cds-field-mapping/main/mapping/not-released-views.json`.
 
     CONSTANTS: BEGIN OF cs_supported_function,
                  case          TYPE string VALUE 'CASE',
@@ -158,11 +162,17 @@ CLASS zcl_bs_demo_cds_extract DEFINITION
                 is_content       TYPE if_xco_cds_view_content=>ts_content
       RETURNING VALUE(rd_result) TYPE string.
 
+    METHODS read_and_merge_relevant_object
+      RETURNING VALUE(rs_result) TYPE ts_cr.
+
     METHODS read_cloudification_repository
       RETURNING VALUE(rs_result) TYPE ts_cr.
 
     METHODS read_mappings
       RETURNING VALUE(rt_result) TYPE tt_repo_intern.
+
+    METHODS read_not_released_objects
+      RETURNING VALUE(rs_result) TYPE ts_cr.
 
     METHODS get_content_form_url
       IMPORTING id_url           TYPE string
@@ -198,9 +208,9 @@ ENDCLASS.
 
 CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    DATA ls_fixed   TYPE ts_object.
     DATA lt_r_cds   TYPE tt_r_cds.
     DATA lt_r_table TYPE tt_r_table.
+    DATA ls_fixed   TYPE ts_object.
 
     " Read a specific entity from repository
 *    INSERT VALUE #( sign   = 'I'
@@ -246,6 +256,7 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
     LOOP AT lt_objects INTO DATA(ls_object).
       INSERT VALUE #( cds_name   = ls_object-cds
                       table_name = ls_object-table
+                      released   = ls_object-released
                       mapping    = get_mapping_from_cds( id_cds   = ls_object-cds
                                                          id_table = ls_object-table ) )
              INTO TABLE rt_result.
@@ -256,7 +267,7 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
 
 
   METHOD get_relevant_objs_from_repo.
-    DATA(ls_cr) = read_cloudification_repository( ).
+    DATA(ls_cr) = read_and_merge_relevant_object( ).
     DATA(lt_mapping) = read_mappings( ).
 
     LOOP AT ls_cr-objectreleaseinfo INTO DATA(ls_object) WHERE tadirobject = 'TABL' AND tadirobjname IN it_r_table.
@@ -273,10 +284,24 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
           CATCH cx_sy_itab_line_not_found.
         ENDTRY.
 
-        INSERT VALUE #( cds   = ls_successor-tadirobjname
-                        table = ls_object-tadirobjname )
+        INSERT VALUE #( cds      = ls_successor-tadirobjname
+                        table    = ls_object-tadirobjname
+                        released = ls_object-released )
                INTO TABLE rt_result.
       ENDLOOP.
+    ENDLOOP.
+  ENDMETHOD.
+
+
+  METHOD read_and_merge_relevant_object.
+    rs_result = read_cloudification_repository( ).
+    DATA(ls_unreleased) = read_not_released_objects( ).
+
+    LOOP AT ls_unreleased-objectreleaseinfo INTO DATA(ls_object).
+      IF NOT line_exists( rs_result-objectreleaseinfo[ tadirobject  = ls_object-tadirobject
+                                                       tadirobjname = ls_object-tadirobjname ] ).
+        INSERT ls_object INTO TABLE rs_result-objectreleaseinfo.
+      ENDIF.
     ENDLOOP.
   ENDMETHOD.
 
@@ -284,6 +309,10 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
   METHOD read_cloudification_repository.
     /ui2/cl_json=>deserialize( EXPORTING json = get_content_form_url( c_url_cloudification_repo )
                                CHANGING  data = rs_result ).
+
+    LOOP AT rs_result-objectreleaseinfo REFERENCE INTO DATA(lr_object).
+      lr_object->released = abap_true.
+    ENDLOOP.
   ENDMETHOD.
 
 
@@ -291,6 +320,12 @@ CLASS zcl_bs_demo_cds_extract IMPLEMENTATION.
     /ui2/cl_json=>deserialize( EXPORTING json        = get_content_form_url( c_url_mappings )
                                          pretty_name = /ui2/cl_json=>pretty_mode-camel_case
                                CHANGING  data        = rt_result ).
+  ENDMETHOD.
+
+
+  METHOD read_not_released_objects.
+    /ui2/cl_json=>deserialize( EXPORTING json = get_content_form_url( c_url_not_released )
+                               CHANGING  data = rs_result ).
   ENDMETHOD.
 
 
