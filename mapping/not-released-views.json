@@ -1,0 +1,15 @@
+{
+    "formatVersion": "1",
+    "objectReleaseInfo": [
+        {
+            "tadirObject": "TABL",
+            "tadirObjName": "VICNCN",
+            "successors": [
+                {
+                    "tadirObject": "DDLS",
+                    "tadirObjName": "I_RECONTRACT"
+                }
+            ]
+        }
+    ]
+}
