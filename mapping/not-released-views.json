@@ -10,6 +10,24 @@
                     "tadirObjName": "I_RECONTRACT"
                 }
             ]
+        },        {
+            "tadirObject": "TABL",
+            "tadirObjName": "BUT0BK",
+            "successors": [
+                {
+                    "tadirObject": "DDLS",
+                    "tadirObjName": "I_BUSINESSPARTNERBANK"
+                }
+            ]
+        },        {
+            "tadirObject": "TABL",
+            "tadirObjName": "VIBDBE",
+            "successors": [
+                {
+                    "tadirObject": "DDLS",
+                    "tadirObjName": "I_REBUSINESSENTITY"
+                }
+            ]
         }
     ]
 }
