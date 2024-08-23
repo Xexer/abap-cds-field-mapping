@@ -37070,5 +37070,271 @@
         "tableField": ""
       }
     ]
+  },
+  {
+    "cdsName": "I_BUSINESSPARTNERBANK",
+    "tableName": "BUT0BK",
+    "released": false,
+    "mapping": [
+      {
+        "cdsField": "BusinessPartner",
+        "tableField": "PARTNER"
+      },
+      {
+        "cdsField": "BankIdentification",
+        "tableField": "BKVID"
+      },
+      {
+        "cdsField": "BankCountryKey",
+        "tableField": "BANKS"
+      },
+      {
+        "cdsField": "BankName",
+        "tableField": ""
+      },
+      {
+        "cdsField": "BankNumber",
+        "tableField": "BANKL"
+      },
+      {
+        "cdsField": "SWIFTCode",
+        "tableField": ""
+      },
+      {
+        "cdsField": "BankControlKey",
+        "tableField": "BKONT"
+      },
+      {
+        "cdsField": "BankAccountHolderName",
+        "tableField": "KOINH"
+      },
+      {
+        "cdsField": "BankAccountName",
+        "tableField": "ACCNAME"
+      },
+      {
+        "cdsField": "ValidityStartDate",
+        "tableField": "BK_VALID_FROM"
+      },
+      {
+        "cdsField": "ValidityEndDate",
+        "tableField": "BK_VALID_TO"
+      },
+      {
+        "cdsField": "IBAN",
+        "tableField": ""
+      },
+      {
+        "cdsField": "IBANValidityStartDate",
+        "tableField": ""
+      },
+      {
+        "cdsField": "BankAccount",
+        "tableField": "BANKN"
+      },
+      {
+        "cdsField": "BankAccountReferenceText",
+        "tableField": "BKREF"
+      },
+      {
+        "cdsField": "CollectionAuthInd",
+        "tableField": "XEZER"
+      },
+      {
+        "cdsField": "BusinessPartnerExternalBankID",
+        "tableField": "BKEXT"
+      },
+      {
+        "cdsField": "BPBankDetailsChangeDate",
+        "tableField": "BK_MOVE_DATE"
+      },
+      {
+        "cdsField": "BPBankDetailsChangeTargetID",
+        "tableField": "MOVE_BKVID"
+      },
+      {
+        "cdsField": "BPBankIsProtected",
+        "tableField": "PROTECT"
+      },
+      {
+        "cdsField": "BPBankUUID",
+        "tableField": "BP_BANK_GUID"
+      },
+      {
+        "cdsField": "CityName",
+        "tableField": ""
+      },
+      {
+        "cdsField": "AuthorizationGroup",
+        "tableField": ""
+      }
+    ]
+  },
+  {
+    "cdsName": "I_REBUSINESSENTITY",
+    "tableName": "VIBDBE",
+    "released": false,
+    "mapping": [
+      {
+        "cdsField": "InternalRealEstateNumber",
+        "tableField": "INTRENO"
+      },
+      {
+        "cdsField": "CompanyCode",
+        "tableField": "BUKRS"
+      },
+      {
+        "cdsField": "REBusinessEntity",
+        "tableField": "SWENR"
+      },
+      {
+        "cdsField": "REStatusObject",
+        "tableField": "OBJNR"
+      },
+      {
+        "cdsField": "REInternalFinNumber",
+        "tableField": "IMKEY"
+      },
+      {
+        "cdsField": "RECreationType",
+        "tableField": "CREATIONTYPE"
+      },
+      {
+        "cdsField": "CreatedByUser",
+        "tableField": "RERF"
+      },
+      {
+        "cdsField": "CreationDate",
+        "tableField": "DERF"
+      },
+      {
+        "cdsField": "CreationTime",
+        "tableField": "TERF"
+      },
+      {
+        "cdsField": "RESourceOfCreation",
+        "tableField": "REHER"
+      },
+      {
+        "cdsField": "LastChangedByUser",
+        "tableField": "RBEAR"
+      },
+      {
+        "cdsField": "LastChangeDate",
+        "tableField": "DBEAR"
+      },
+      {
+        "cdsField": "LastChangeTime",
+        "tableField": "TBEAR"
+      },
+      {
+        "cdsField": "RESourceOfChange",
+        "tableField": "RBHER"
+      },
+      {
+        "cdsField": "Responsible",
+        "tableField": "RESPONSIBLE"
+      },
+      {
+        "cdsField": "REUserExclusive",
+        "tableField": "USEREXCLUSIVE"
+      },
+      {
+        "cdsField": "REAuthorizationGroup",
+        "tableField": "AUTHGRP"
+      },
+      {
+        "cdsField": "ValidityStartDate",
+        "tableField": "VALIDFROM"
+      },
+      {
+        "cdsField": "ValidityEndDate",
+        "tableField": "VALIDTO"
+      },
+      {
+        "cdsField": "REBusinessEntityName",
+        "tableField": "XWETEXT"
+      },
+      {
+        "cdsField": "Currency",
+        "tableField": "WAERS"
+      },
+      {
+        "cdsField": "REAreaUnit",
+        "tableField": "FEINS"
+      },
+      {
+        "cdsField": "RECubicUnit",
+        "tableField": "REINS"
+      },
+      {
+        "cdsField": "RELengthUnit",
+        "tableField": "VVLEN"
+      },
+      {
+        "cdsField": "REMaintenanceDistrict",
+        "tableField": "SINSTBEZ"
+      },
+      {
+        "cdsField": "RERegionalLocation",
+        "tableField": "SSTDORT"
+      },
+      {
+        "cdsField": "RETransportConnectionBusEntity",
+        "tableField": "SVERKEHR"
+      },
+      {
+        "cdsField": "RELocationNumberBusEntity",
+        "tableField": "SLAGEWE"
+      },
+      {
+        "cdsField": "REDistrictLocation",
+        "tableField": "SOBJLAGE"
+      },
+      {
+        "cdsField": "RETenancyLaw",
+        "tableField": "SMIETR"
+      },
+      {
+        "cdsField": "REListOfRents",
+        "tableField": "RLRA"
+      },
+      {
+        "cdsField": "REPrdfndOperatingCostSettlmt",
+        "tableField": "VORBK"
+      },
+      {
+        "cdsField": "REPrdfndHeatingCostSettlmt",
+        "tableField": "VORHK"
+      },
+      {
+        "cdsField": "REAutomCrtnOfFuncnlLocIsOff",
+        "tableField": "XNOTPL"
+      },
+      {
+        "cdsField": "RENeighborhood01Text",
+        "tableField": "NEIGHBORH1"
+      },
+      {
+        "cdsField": "RENeighborhood02Text",
+        "tableField": "NEIGHBORH2"
+      },
+      {
+        "cdsField": "RENeighborhood03Text",
+        "tableField": "NEIGHBORH3"
+      },
+      {
+        "cdsField": "REFunctionOfObject",
+        "tableField": "USGFUNCTION"
+      },
+      {
+        "cdsField": "RealEstateObjectType",
+        "tableField": ""
+      },
+      {
+        "cdsField": "REIdentificationKey",
+        "tableField": ""
+      }
+    ]
   }
 ]
