@@ -22,7 +22,19 @@ ENDCLASS.
 
 CLASS zcl_bs_demo_cds_names IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    out->write( extract_cds_name( VALUE #( ) ) ).
+    DATA(lt_r_names) = VALUE tt_r_name( sign   = 'I'
+                                        option = 'EQ'
+                                        ( low = 'I_COMPANYCODE' )
+                                        ( low = '/1BS/SADL_CDS_EXP' )
+                                        ( low = 'A_CHANGEMASTEROBJECTTYPETEXT' )
+                                        ( low = 'C_BUDGETPERIODCHILDGROUP' )
+                                        ( low = 'I_ABOPCHECKINGRULE' )
+                                        ( low = 'I_JOBSTATUS' )
+                                        ( low = 'SADL_CDS_RS_SO_ROOT_W_DB_HINT' )
+                                        ( low = 'SADL_GW_V_AUNIT_V2_VH_WRONG_AN' )
+                                        ( low = 'SEPM_SDDL_EXTENSIONS' ) ).
+
+    out->write( extract_cds_name( lt_r_names ) ).
   ENDMETHOD.
 
 
@@ -43,9 +55,9 @@ CLASS zcl_bs_demo_cds_names IMPLEMENTATION.
 
       DATA(ld_start) = line_index( lt_split[ table_line = `define` ] ).
 
-      LOOP AT lt_split INTO DATA(ld_split) FROM ld_start.
-        IF to_upper( ld_split ) = lr_view->ddlname.
-          lr_result->cds_name = ld_split.
+      LOOP AT lt_split REFERENCE INTO DATA(lr_split) FROM ld_start.
+        IF to_upper( lr_split->* ) = lr_view->ddlname.
+          lr_result->cds_name = lr_split->*.
           EXIT.
         ENDIF.
       ENDLOOP.
