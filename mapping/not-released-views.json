@@ -37,6 +37,15 @@
                     "tadirObjName": "I_IHBACCOUNT"
                 }
             ]
+        },        {
+            "tadirObject": "TABL",
+            "tadirObjName": "BP001",
+            "successors": [
+                {
+                    "tadirObject": "DDLS",
+                    "tadirObjName": "I_BPFINANCIALSERVICESEXTN"
+                }
+            ]
         }
     ]
 }
