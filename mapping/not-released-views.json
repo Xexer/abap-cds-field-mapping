@@ -28,6 +28,15 @@
                     "tadirObjName": "I_REBUSINESSENTITY"
                 }
             ]
+        },        {
+            "tadirObject": "TABL",
+            "tadirObjName": "/PF1/DB_ACCT",
+            "successors": [
+                {
+                    "tadirObject": "DDLS",
+                    "tadirObjName": "I_IHBACCOUNT"
+                }
+            ]
         }
     ]
 }
